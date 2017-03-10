@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Introduction",
     "category": "section",
-    "text": "Magnetic particle imaging (MPI) is a tomograpic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are openly available for the research community and can be used for evaluating new reconstruction algorithms. We describe the datasets, the used phantoms, and the applied measurement sequences in detail so that the can be reproduced.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets that should cover the most interesting use cases. New datasets can be easily added and researcher wordwide are invited to  contribute own datasets. "
+    "text": "__This site is still under construction. Please do not use until this message is removed__Magnetic particle imaging (MPI) is a tomograpic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are openly available for the research community and can be used for evaluating new reconstruction algorithms. We describe the datasets, the used phantoms, and the applied measurement sequences in detail so that the can be reproduced.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets that should cover the most interesting use cases. New datasets can be easily added and researcher wordwide are invited to  contribute own datasets. "
 },
 
 {
@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Scanners",
     "title": "Bruker Preclinical MPI Scanner",
     "category": "section",
-    "text": "TODO "
+    "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 11.8 mm\nMaxDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency ??? x ??? x ???\nMax Selection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms"
 },
 
 {
@@ -125,7 +125,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Tracers",
     "category": "section",
-    "text": ""
+    "text": "Here we describe the tracers that have been used for the measurements"
+},
+
+{
+    "location": "tracers.html#Resovist-1",
+    "page": "Tracers",
+    "title": "Resovist",
+    "category": "section",
+    "text": "TODO"
 },
 
 {
