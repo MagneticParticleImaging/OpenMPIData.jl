@@ -4,6 +4,8 @@ Initiative for open Magnetic Particle Imaging Data
 
 ## Introduction
 
+__This site is still under construction. Please do not use until this message is removed__
+
 Magnetic particle imaging (MPI) is a tomograpic imaging technique that allows
 to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim
 of this project is to provide MPI data that are openly available for the research
