@@ -49,19 +49,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "gettingStarted.html#",
-    "page": "Getting Started",
-    "title": "Getting Started",
+    "location": "scanners.html#",
+    "page": "Scanners",
+    "title": "Scanners",
     "category": "page",
     "text": ""
 },
 
 {
-    "location": "gettingStarted.html#Getting-Started-1",
-    "page": "Getting Started",
-    "title": "Getting Started",
+    "location": "scanners.html#MPI-Scanners-1",
+    "page": "Scanners",
+    "title": "MPI Scanners",
     "category": "section",
-    "text": "TODO"
+    "text": "Here we describe the MPI scanners being used to acquire the MPI data"
+},
+
+{
+    "location": "scanners.html#Bruker-Preclinical-MPI-Scanner-1",
+    "page": "Scanners",
+    "title": "Bruker Preclinical MPI Scanner",
+    "category": "section",
+    "text": "TODO "
 },
 
 {
@@ -77,7 +85,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Phantoms",
     "category": "section",
-    "text": ""
+    "text": "Here, we describe the phantoms being used during the MPI measurements."
+},
+
+{
+    "location": "phantoms.html#Resolution-Phantom-1",
+    "page": "Phantoms",
+    "title": "Resolution Phantom",
+    "category": "section",
+    "text": "TODO"
+},
+
+{
+    "location": "phantoms.html#Concentration-Phantom-1",
+    "page": "Phantoms",
+    "title": "Concentration Phantom",
+    "category": "section",
+    "text": "TODO"
+},
+
+{
+    "location": "phantoms.html#Dynamic-Phantom-1",
+    "page": "Phantoms",
+    "title": "Dynamic Phantom",
+    "category": "section",
+    "text": "TODO"
 },
 
 {
@@ -108,6 +140,38 @@ var documenterSearchIndex = {"docs": [
     "location": "sequences.html#Sequences-1",
     "page": "Sequences",
     "title": "Sequences",
+    "category": "section",
+    "text": "Several MPI measurement sequences have been used for data acquisition. All parameters are described in the following"
+},
+
+{
+    "location": "sequences.html#D-Lissajous-Sequence-1",
+    "page": "Sequences",
+    "title": "2D Lissajous Sequence",
+    "category": "section",
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency ??? x ??? x ???\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms\nNumber Measured Frames 1000"
+},
+
+{
+    "location": "sequences.html#D-Cartesian-Sequence-1",
+    "page": "Sequences",
+    "title": "2D Cartesian Sequence",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "sequences.html#D-Lissajous-Sequence-2",
+    "page": "Sequences",
+    "title": "3D Lissajous Sequence",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "sequences.html#Dt-Lissajous-Sequence-1",
+    "page": "Sequences",
+    "title": "3D+t Lissajous Sequence",
     "category": "section",
     "text": ""
 },
