@@ -4,7 +4,7 @@ Here we describe the MPI scanners being used to acquire the MPI data
 
 ## Bruker Preclinical MPI Scanner
 
-<img src="./assets/BrukerScanner.jpg" width="200">
+![Bruker Preclinical MPI Scanner](./assets/BrukerScanner.jpg)
 
 The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped
 with a fully 3D send/receive system and 3D focus fields allowing for
