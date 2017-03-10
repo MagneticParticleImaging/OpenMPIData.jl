@@ -12,6 +12,7 @@ makedocs(
         "Phantoms" => "phantoms.md",
         "Tracers" => "tracers.md",
         "Sequences" => "sequences.md",
+        "Calibration" => "calibration.md",
     ],
 )
 
