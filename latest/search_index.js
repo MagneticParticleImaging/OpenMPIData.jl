@@ -49,6 +49,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "datasets.html#",
+    "page": "Datasets",
+    "title": "Datasets",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "datasets.html#Datasets-1",
+    "page": "Datasets",
+    "title": "Datasets",
+    "category": "section",
+    "text": "The datasets have been acquired with different scanners, tracers, measurements sequences and phantoms. To get an overview on all datasets you can download the following csv file:TODO same for calibrations"
+},
+
+{
     "location": "scanners.html#",
     "page": "Scanners",
     "title": "Scanners",
@@ -197,31 +213,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "Calibration",
     "category": "section",
-    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.note: Note\nThe calibration datasets are all measured on a 3D sampling grid  idependently of the excitation dimension. For 1D and 2D image  reconstruction it is advised to extract appropriate slices prior to reconstruction. "
+    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.Each calibration dataset is acquired with a small sample of a specific tracer representing an image voxel. The delta sample is placed at various positions within the target FOV and calibration measurements are taken.Even for 1D and 2D sequences we measured the system matrix on a 3D grid. While this is not strictly necessary for image reconstruction it can be very usefull when studying the particle physics. It is advised to extract appropriate slices prior to reconstruction.All calibration datasets are also acquired outside the drive-field FOV. This \"overscanning\" is essential to avoid particles from outside the FOV influencing the reconstruction result inside the FOV. The overscan may be manually shrinked prior to reconstruction"
 },
 
 {
-    "location": "calibration.html#D-Calibration-Data-1",
+    "location": "calibration.html#Transfer-Function-1",
     "page": "Calibration",
-    "title": "1D Calibration Data",
+    "title": "Transfer Function",
     "category": "section",
-    "text": "TODO"
-},
-
-{
-    "location": "calibration.html#D-Calibration-Data-2",
-    "page": "Calibration",
-    "title": "2D Calibration Data",
-    "category": "section",
-    "text": "TODO"
-},
-
-{
-    "location": "calibration.html#D-Calibration-Data-3",
-    "page": "Calibration",
-    "title": "3D Calibration Data",
-    "category": "section",
-    "text": "TODO"
+    "text": "All datasets include the tranfer function of the receive chain. One has to divide the measured frequency data by this transfer function in order to get corrected signals. This is in particular important when interpreting time signals."
 },
 
 ]}
