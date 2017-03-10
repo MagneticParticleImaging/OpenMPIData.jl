@@ -184,4 +184,44 @@ var documenterSearchIndex = {"docs": [
     "text": ""
 },
 
+{
+    "location": "calibration.html#",
+    "page": "Calibration",
+    "title": "Calibration",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "calibration.html#Calibration-1",
+    "page": "Calibration",
+    "title": "Calibration",
+    "category": "section",
+    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.note: Note\nThe calibration datasets are all measured on a 3D sampling grid  idependently of the excitation dimension. For 1D and 2D image  reconstruction it is advised to extract appropriate slices prior to reconstruction. "
+},
+
+{
+    "location": "calibration.html#D-Calibration-Data-1",
+    "page": "Calibration",
+    "title": "1D Calibration Data",
+    "category": "section",
+    "text": "TODO"
+},
+
+{
+    "location": "calibration.html#D-Calibration-Data-2",
+    "page": "Calibration",
+    "title": "2D Calibration Data",
+    "category": "section",
+    "text": "TODO"
+},
+
+{
+    "location": "calibration.html#D-Calibration-Data-3",
+    "page": "Calibration",
+    "title": "3D Calibration Data",
+    "category": "section",
+    "text": "TODO"
+},
+
 ]}
