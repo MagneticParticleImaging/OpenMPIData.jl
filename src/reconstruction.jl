@@ -1,43 +1,88 @@
 using HDF5
 
-export reconstruction, kaczmarzReg
+export reconstruction, kaczmarzReg, filterFrequencies
 
 
-function reconstruction(filenameCalib, filenameMeas, iterations, lambda)
+function reconstruction(filenameCalib, filenameMeas; 
+                        iterations=1, lambda=0.1, SNRThresh=1.8, 
+                        minFreq=30e3, maxFreq=1.25e6, recChannels=1:3)
 
-  # read the full system matrix
-  S = h5read(filenameCalib, "/calibration/dataFD")
-  # reinterpret to complex data
-  S = reinterpret(Complex{eltype(S)}, S, (size(S,2),size(S,3),size(S,4)))
+  nFreq = length(h5read(filenameCalib, "/acquisition/receiver/frequencies"))
+ 
+  # filter frequencies and load the indices of matrix rows that
+  # should be used for reconstruction
+  freq = filterFrequencies(filenameCalib, SNRThresh=SNRThresh, minFreq=minFreq,
+                           maxFreq=maxFreq, recChannels=recChannels) 
 
-  # read the measurement data
+  # get type of system matrix and sizes
+  firstRow = h5read(filenameCalib, "/calibration/dataFD", (:, :, 1, 1) )
+  S = zeros(Complex{eltype(firstRow)}, size(firstRow,2), length(freq))
+
+  for (idx,fr) in enumerate(freq)
+    i, j = ind2sub((nFreq,3), fr)
+    row = h5read(filenameCalib, "/calibration/dataFD", (:, :, i, j))
+    S[:,idx] = reinterpret(Complex{eltype(firstRow)}, row, (size(row,2),))
+  end
+
+  # read the (full) measurement data and drop the frequencies
   u = h5read(filenameMeas, "/measurement/dataFD")
-  u = reinterpret(Complex{eltype(u)}, u, (size(u,2), size(u,3), size(u,4)))
-
-  # we now load the frequencies
-  freq = h5read(filenameMeas, "/acquisition/receiver/frequencies")
-
-  # remove frequencies below 30 kHz
-  idxMin = findfirst( freq .> 30e3)
-  S = S[:,idxMin:end,:]
-  u = u[idxMin:end,:,:]
-
-  # merge frequency and receive channel dimensions
-  S = reshape(S, size(S,1), size(S,2)*size(S,3))
-  u = reshape(u, size(u,1)*size(u,2), size(u,3))
+  u = reinterpret(Complex{eltype(u)}, u, (size(u,2)*size(u,3), size(u,4)))
+  u = u[freq,:]
 
   # average over all temporal frames
   u = vec(mean(u,2))
 
+  lambda_ = calculateTraceOfNormalMatrix(S)*lambda/size(S,1)
+  
   # reconstruct using kaczmarz algorithm
-  c = kaczmarzReg(S,u,1,1e6,false,true,true)
+  c = kaczmarzReg(S,u,iterations, lambda_, false, true, true)
 
   return c
 end
 
 
+function filterFrequencies(filenameCalib; SNRThresh=-1, minFreq=0, maxFreq=1.25e6, recChannels=1:3)
 
+  freq = h5read(filenameCalib, "/acquisition/receiver/frequencies")
+  nFreq = length(freq)
+  nReceivers = h5read(filenameCalib, "/acquisition/receiver/numChannels")
+  bandwidth = h5read(filenameCalib, "/acquisition/receiver/bandwidth")
 
+  minIdx = round(Int, minFreq / bandwidth * nFreq )
+  maxIdx = round(Int, maxFreq / bandwidth * nFreq )
+
+  freqMask = zeros(Bool, nFreq, nReceivers)
+
+  freqMask[:,recChannels] = true
+
+  if minIdx > 0
+    freqMask[1:(minIdx-1),:] = false
+  end
+  if maxIdx < nFreq
+    freqMask[(maxIdx+1):end,:] = false
+  end
+  
+
+  SNR_ = h5read(filenameCalib, "/calibration/snrFD")
+  SNR = reshape(SNR_, div(length(SNR_),3),3)
+
+  if SNRThresh > 0
+    freqMask[ find(vec(SNR) .< SNRThresh) ] =  false
+  end
+
+  freq = find( vec(freqMask) )
+
+  return freq
+end
+
+function calculateTraceOfNormalMatrix(S)
+  energy = zeros(Float64, size(S,2))
+  for m=1:size(S,2)
+    energy[m] = norm(S[:,m])
+  end
+  return  norm(energy)^2
+end
+ 
 
 
 @doc """
