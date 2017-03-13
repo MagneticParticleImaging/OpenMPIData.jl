@@ -21,15 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Introduction",
     "category": "section",
-    "text": "__This site is still under construction. Please do not use until this message is removed__Magnetic particle imaging (MPI) is a tomograpic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are openly available for the research community and can be used for evaluating new reconstruction algorithms. We describe the datasets, the used phantoms, and the applied measurement sequences in detail so that the can be reproduced.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets that should cover the most interesting use cases. New datasets can be easily added and researcher wordwide are invited to  contribute own datasets. "
-},
-
-{
-    "location": "index.html#Installation-1",
-    "page": "Home",
-    "title": "Installation",
-    "category": "section",
-    "text": "The provided MPI data can be read from any programming language like Matlab, Python, Julia, and C.  On the MDF website example scripts for reading MDF data from Matlab, Python, and Julia are available.This project uses the programming language Julia for data downloading and example reconstructions. First you have to install Julia. Then open Julia and enterPkg.clone(\"https://github.com/MagneticParticleImaging/OpenMPIData.jl.git\")which will install the project. Then enterusing OpenMPIData\ndownloadOpenMPIData()The first command will import the OpenMPIData package, the second command will download all MPI data which can last several minutes up to hours depending on the speed of your internet connection.TODO: example reconstructions"
+    "text": "This site is still under construction. Please do not use until this message is removedMagnetic particle imaging (MPI) is a tomograpic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are openly available for the research community and can be freely used. To facilate reproducable research all available information including a detailed description of the used pahntoms and the applied measurement sequences are provided.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets that covering the most interesting cases to get started with MPI. New datasets can be easily added and researcher wordwide  are invited to contribute own datasets. "
 },
 
 {
@@ -45,7 +37,39 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Contribution",
     "category": "section",
+    "text": "We invite you to contribute to this project and provide your own MPI data. Please open an issue to discuss how to add your data to the project."
+},
+
+{
+    "location": "index.html#Contact-1",
+    "page": "Home",
+    "title": "Contact",
+    "category": "section",
+    "text": "If you have problems using the datasets, find mistakes, or have general questions please use the issue tracker to contact us. You can also contact Tobias Knopp directly."
+},
+
+{
+    "location": "usage.html#",
+    "page": "Usage",
+    "title": "Usage",
+    "category": "page",
     "text": ""
+},
+
+{
+    "location": "usage.html#Installation-and-Usage-1",
+    "page": "Usage",
+    "title": "Installation and Usage",
+    "category": "section",
+    "text": ""
+},
+
+{
+    "location": "usage.html#Installation-1",
+    "page": "Usage",
+    "title": "Installation",
+    "category": "section",
+    "text": "The provided MPI data can be read from any programming language like Matlab, Python, Julia, and C. On the MDF website example scripts for reading MDF data from Matlab, Python, and Julia are available.This project uses the programming language Julia for data downloading and example reconstructions. First you have to install Julia. Then open Julia and enterPkg.clone(\"https://github.com/MagneticParticleImaging/OpenMPIData.jl.git\")which will install the project. Then enterusing OpenMPIData\ndownloadOpenMPIData()The first command will import the OpenMPIData package, the second command will download all MPI data which can last several minutes up to hours depending on the speed of your internet connection.TODO: example reconstructionsTODO"
 },
 
 {
