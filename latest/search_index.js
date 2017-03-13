@@ -25,9 +25,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "index.html#License-/-Usage-1",
+    "location": "index.html#License-/-Terms-of-Usage-1",
     "page": "Home",
-    "title": "License / Usage",
+    "title": "License / Terms of Usage",
     "category": "section",
     "text": "The source code of this project is licensed under the MIT license. All MPI data is licensed under the CC BY 4.0 license. This implies that you are free to use, share, and adapt the data. However, you must give appropriate credit. In particular we ask you to cite the MDF publication and ... TODO"
 },
@@ -197,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "2D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency ??? x ??? x ???\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms\nNumber Measured Frames 1000"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms\nNumber of Frames 1000"
 },
 
 {
@@ -205,7 +205,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "2D Cartesian Sequence",
     "category": "section",
-    "text": ""
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 40.8 mus\nNumber of Frames 1000"
 },
 
 {
