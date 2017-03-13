@@ -21,7 +21,7 @@ This projects comes with a first set of datasets that covering the most interest
 cases to get started with MPI. New datasets can be easily added and researcher wordwide 
 are invited to contribute own datasets. 
 
-## License / Usage
+## License / Terms of Usage
 
 The source code of this project is licensed under the MIT license. All MPI data is licensed
 under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. This implies that
