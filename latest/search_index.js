@@ -109,7 +109,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Scanners",
     "title": "Bruker Preclinical MPI Scanner",
     "category": "section",
-    "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 11.8 mm\nMaxDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency ??? x ??? x ???\nMax Selection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms"
+    "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 11.8 mm\nMaxDrive-Field Amplitude 14 mT x 14 mT x 14 mT\nMaxFocus-Field Amplitude 17 mT x 17 mT x 42 mT\nDrive-Field Frequency 2.5MHz/102 x 2.5MHz/96 x 2.5MHz/99\nMax Selection-Field Gradient -1.25 T/m x -1.25 T/m x 2.5 T/m\nRepetition Time 38.4 mus - 21.54 ms"
 },
 
 {
@@ -197,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "2D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time ??? ms\nNumber of Frames 1000"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Frames 1000"
 },
 
 {
@@ -213,15 +213,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "3D Lissajous Sequence",
     "category": "section",
-    "text": ""
-},
-
-{
-    "location": "sequences.html#Dt-Lissajous-Sequence-1",
-    "page": "Sequences",
-    "title": "3D+t Lissajous Sequence",
-    "category": "section",
-    "text": ""
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 12 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 21.54 ms\nNumber of Frames 1000"
 },
 
 {
@@ -237,7 +229,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "Calibration",
     "category": "section",
-    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.Each calibration dataset is acquired with a small sample of a specific tracer representing an image voxel. The delta sample is placed at various positions within the target FOV and calibration measurements are taken.Even for 1D and 2D sequences we measured the system matrix on a 3D grid. While this is not strictly necessary for image reconstruction it can be very usefull when studying the particle physics. It is advised to extract appropriate slices prior to reconstruction.All calibration datasets are also acquired outside the drive-field FOV. This \"overscanning\" is essential to avoid particles from outside the FOV influencing the reconstruction result inside the FOV. The overscan may be manually shrinked prior to reconstruction"
+    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.Each calibration dataset is acquired with a small sample of a specific tracer representing an image voxel. The delta sample is placed at various positions within the target FOV and calibration measurements are taken.Even for 1D and 2D sequences we measured the system matrix on a 3D grid. While this is not strictly necessary for image reconstruction it can be very usefull when studying the particle physics. It is advised to extract appropriate slices prior to reconstruction.All calibration datasets are also acquired outside the drive-field FOV. This \"overscanning\" is essential to avoid particles from outside the FOV influencing the reconstruction result inside the FOV. The overscan may be manually shrinked prior to reconstructionTracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm  Before each measurment a 30 minute Warm Up has been applied "
+},
+
+{
+    "location": "calibration.html#D-Sequence-1",
+    "page": "Calibration",
+    "title": "1D Sequence",
+    "category": "section",
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 40.8 mus\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
+},
+
+{
+    "location": "calibration.html#D-Lissajous-Sequence-1",
+    "page": "Calibration",
+    "title": "2D Lissajous Sequence",
+    "category": "section",
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 652.8 mus\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
+},
+
+{
+    "location": "calibration.html#D-Lissajous-Sequence-2",
+    "page": "Calibration",
+    "title": "3D Lissajous Sequence",
+    "category": "section",
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 12 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 21.54 ms\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
 },
 
 {
