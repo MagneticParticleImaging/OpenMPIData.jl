@@ -9,5 +9,5 @@ c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.0001,
 
 figure(1)
 clf()
-imshow(reshape(abs(c),44,44), interpolation="nearest")
+imshow(reshape(abs.(c),44,44), interpolation="nearest")
 gray()

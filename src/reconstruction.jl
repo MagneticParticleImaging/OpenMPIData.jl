@@ -1,36 +1,28 @@
-using HDF5
-
-export reconstruction, kaczmarzReg, filterFrequencies
+export reconstruction, kaczmarzReg
 
 
 function reconstruction(filenameCalib, filenameMeas; 
                         iterations=1, lambda=0.1, SNRThresh=1.8, 
                         minFreq=30e3, maxFreq=1.25e6, recChannels=1:3)
 
-  nFreq = length(h5read(filenameCalib, "/acquisition/receiver/frequencies"))
- 
+  fCalib = MPIFile(filenameCalib)
+  fMeas = MPIFile(filenameMeas)
+
+
   # filter frequencies and load the indices of matrix rows that
   # should be used for reconstruction
-  freq = filterFrequencies(filenameCalib, SNRThresh=SNRThresh, minFreq=minFreq,
+  freq = filterFrequencies(fCalib, SNRThresh=SNRThresh, minFreq=minFreq,
                            maxFreq=maxFreq, recChannels=recChannels) 
 
-  # get type of system matrix and sizes
-  firstRow = h5read(filenameCalib, "/calibration/dataFD", (:, :, 1, 1) )
-  S = zeros(Complex{eltype(firstRow)}, size(firstRow,2), length(freq))
+  S = getSystemMatrix(fCalib, freq, loadas32bit=true, bgCorrection=true)
 
-  for (idx,fr) in enumerate(freq)
-    i, j = ind2sub((nFreq,3), fr)
-    row = h5read(filenameCalib, "/calibration/dataFD", (:, :, i, j))
-    S[:,idx] = reinterpret(Complex{eltype(firstRow)}, row, (size(row,2),))
-  end
+  u = getMeasurementsFD(fMeas, frequencies=freq)
 
-  # read the (full) measurement data and drop the frequencies
-  u = h5read(filenameMeas, "/measurement/dataFD")
-  u = reinterpret(Complex{eltype(u)}, u, (size(u,2)*size(u,3), size(u,4)))
-  u = u[freq,:]
+  println(size(S))
+  println(size(u))
 
   # average over all temporal frames
-  u = vec(mean(u,2))
+  u = vec(mean(u,3))
 
   lambda_ = calculateTraceOfNormalMatrix(S)*lambda/size(S,1)
   
@@ -40,40 +32,6 @@ function reconstruction(filenameCalib, filenameMeas;
   return c
 end
 
-
-function filterFrequencies(filenameCalib; SNRThresh=-1, minFreq=0, maxFreq=1.25e6, recChannels=1:3)
-
-  freq = h5read(filenameCalib, "/acquisition/receiver/frequencies")
-  nFreq = length(freq)
-  nReceivers = h5read(filenameCalib, "/acquisition/receiver/numChannels")
-  bandwidth = h5read(filenameCalib, "/acquisition/receiver/bandwidth")
-
-  minIdx = round(Int, minFreq / bandwidth * nFreq )
-  maxIdx = round(Int, maxFreq / bandwidth * nFreq )
-
-  freqMask = zeros(Bool, nFreq, nReceivers)
-
-  freqMask[:,recChannels] = true
-
-  if minIdx > 0
-    freqMask[1:(minIdx-1),:] = false
-  end
-  if maxIdx < nFreq
-    freqMask[(maxIdx+1):end,:] = false
-  end
-  
-
-  SNR_ = h5read(filenameCalib, "/calibration/snrFD")
-  SNR = reshape(SNR_, div(length(SNR_),3),3)
-
-  if SNRThresh > 0
-    freqMask[ find(vec(SNR) .< SNRThresh) ] =  false
-  end
-
-  freq = find( vec(freqMask) )
-
-  return freq
-end
 
 function calculateTraceOfNormalMatrix(S)
   energy = zeros(Float64, size(S,2))
@@ -134,7 +92,7 @@ function kaczmarzReg{T}(A::AbstractMatrix{T}, b::Vector{T}, iterations, lambd, s
     end
 
     if enforceReal && eltype(x) <: Complex
-      x = complex(real(x),0)
+      x = complex.(real.(x),0)
     end
     if enforcePositive
       x[real(x) .< 0] = 0
