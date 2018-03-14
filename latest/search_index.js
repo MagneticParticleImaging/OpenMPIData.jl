@@ -133,7 +133,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Resolution Phantom",
     "category": "section",
-    "text": "TODO"
+    "text": "The resolution phantom consits of 5 tubes filled with Perimag featuring a concentration of 50 mmol. The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller () than in XY direction (). By chosing different planes, one can determine the capable resolution due to different distances of the tubes.(Image: Resolution Phantom)(Image: Resolution Phantom)"
 },
 
 {
@@ -141,15 +141,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Concentration Phantom",
     "category": "section",
-    "text": "TODO"
+    "text": "The second phantom consists of 8 cubes of 2mm edge length resulting in 8µl volume each. The distance of the cubes are 12 mm between centers (10 mm between edges)  within the XY plane and 6 between centers (4 mm between corners) within Z direction. We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise. The concentrations in the 8 sample chambers are the following:Num. Concentration\n1 100 mmol/l\n2 66.6 mmol/l\n3 44.4 mmol/l\n4 29.6 mmol/l\n5 19.7 mmol/l\n6 13.1 mmol/l\n7 8.77 mmol/l\n8 5.85 mmol/l(Image: ConcentrationPhantom)(Image: ConcentrationPhantom)"
 },
 
 {
-    "location": "phantoms.html#Dynamic-Phantom-1",
+    "location": "phantoms.html#Shape-Phantom-1",
     "page": "Phantoms",
-    "title": "Dynamic Phantom",
+    "title": "Shape Phantom",
     "category": "section",
-    "text": "TODO"
+    "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)(Image: ShapePhantom)"
 },
 
 {
