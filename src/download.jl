@@ -4,13 +4,21 @@ export downloadOpenMPIData
 
 function downloadOpenMPIData()
 
-mkpath(Pkg.dir("OpenMPIData","data","reconstructions"))
-mkpath(Pkg.dir("OpenMPIData","data","calibrations"))
-stream = get("http://media.tuhh.de/ibi/mdfv2/systemMatrix_V2.mdf")
-save(stream, Pkg.dir("OpenMPIData","data","calibrations","1.mdf"))
+  mkpath(Pkg.dir("OpenMPIData","data","reconstructions"))
+  mkpath(Pkg.dir("OpenMPIData","data","calibrations"))
+  mkpath(Pkg.dir("OpenMPIData","data","measurements","resolutionPhantom"))
+  mkpath(Pkg.dir("OpenMPIData","data","measurements","conePhantom"))
+  mkpath(Pkg.dir("OpenMPIData","data","measurements","concentrationPhantom"))
 
-mkpath(Pkg.dir("OpenMPIData","data","measurements","dicePhantom"))
-stream = get("http://media.tuhh.de/ibi/mdfv2/measurement_V2.mdf")
-save(stream, Pkg.dir("OpenMPIData","data","measurements","dicePhantom","1.mdf"))
+  files = [#"data/calibrations/1.mdf",
+           #"data/calibrations/2.mdf",
+           "data/calibrations/3.mdf",
+           "data/measurements/resolutionPhantom/3.mdf",
+           "data/measurements/conePhantom/3.mdf"
+
+  for file in files
+    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
+    save(stream, Pkg.dir("OpenMPIData",file))
+  end
 
 end
