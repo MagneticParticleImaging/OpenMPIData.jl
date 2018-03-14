@@ -2,6 +2,9 @@
 
 Here we describe the tracers that have been used for the measurements
 
-## Resovist
+## Perimag
+micromod:
+[perimag](https://www.micromod.de/de/produkte-197-magnetisch_peri.html)
 
-TODO
+
+<!---comment--->
