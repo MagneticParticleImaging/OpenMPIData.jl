@@ -18,9 +18,6 @@ function reconstruction(filenameCalib, filenameMeas;
 
   u = getMeasurementsFD(fMeas, frequencies=freq)
 
-  println(size(S))
-  println(size(u))
-
   # average over all temporal frames
   u = vec(mean(u,3))
 
@@ -29,7 +26,7 @@ function reconstruction(filenameCalib, filenameMeas;
   # reconstruct using kaczmarz algorithm
   c = kaczmarzReg(S,u,iterations, lambda_, false, true, true)
 
-  return c
+  return reshape(c, calibSize(fCalib)..., :)
 end
 
 

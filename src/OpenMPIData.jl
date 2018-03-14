@@ -6,9 +6,9 @@ if !isdir(Pkg.dir("MPIFiles"))
   Pkg.clone("https://github.com/MagneticParticleImaging/MPIFiles.jl.git")
 end
 @reexport using MPIFiles
+@reexport using PyPlot
 
 include("download.jl")
-include("MDF.jl")
 include("reconstruction.jl")
 include("visualization.jl")
 
