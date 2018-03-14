@@ -2,6 +2,7 @@
 language: julia
 os:
   - linux
+sudo: required
 julia:
   - release
 #  - nightly
