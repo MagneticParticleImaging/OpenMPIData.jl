@@ -6,12 +6,21 @@ sudo: required
 julia:
   - release
 #  - nightly
+env:
+  global:
+    - PYCALL_DEBUG_BUILD="yes"
+  matrix:
+    - PYTHON=python  # python 2.7
+    - PYTHON=python3 # python 3.5
+- PYTHON=Conda-python # not actually a python version, here to test Conda.jl's python
 notifications:
   email: false
 # uncomment the following lines to override the default test script
 #script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
 #  - julia -e 'Pkg.clone(pwd()); Pkg.build("OpenMPIData"); Pkg.test("OpenMPIData"; coverage=true)'
+before_install:
+- test "x$TRAVIS_OS_NAME" = xosx -o "x$PYTHON" = xConda-python || (sudo apt-get -qq update && sudo apt-get install -y $PYTHON)
 after_success:
   # push coverage results to Coveralls
   - julia -e 'cd(Pkg.dir("OpenMPIData")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
