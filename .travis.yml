@@ -18,9 +18,6 @@ before_install:
   #- test "x$TRAVIS_OS_NAME" = xosx -o "x$PYTHON" = xConda-python || (sudo apt-get -qq update && sudo apt-get install -y $PYTHON)
   # Work around (part 1/2) matplotlib backend error leading to "matplotlib.pyplot could not be found by pyimport": can't just set env PYTHON="".
   - julia -e 'ENV["PYTHON"]=""; Pkg.add("Conda"); using Conda; Conda.update(); Conda.add("matplotlib"); Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.add("PyPlot");'
-script:
-  # Work around (part 2/2) matplotlib backend error leading to "matplotlib.pyplot could not be found by pyimport": point LD_LIBRARY_PATH to Conda libs.
-  - export LD_LIBRARY_PATH=$HOME/.julia/v0.6/Conda/deps/usr/lib; julia --check-bounds=yes -e 'Pkg.clone(pwd());Pkg.build("WaveSim");Pkg.test("WaveSim"; coverage=true);'
 after_success:
   # push coverage results to Coveralls
   - julia -e 'cd(Pkg.dir("OpenMPIData")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
