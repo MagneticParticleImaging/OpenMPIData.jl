@@ -13,7 +13,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Open MPI Data",
     "category": "section",
-    "text": "Initiative for open Magnetic Particle Imaging Data"
+    "text": "Initiative for open magnetic particle imaging data"
 },
 
 {
@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Introduction",
     "category": "section",
-    "text": "This site is still under construction. Please do not use until this message is removedMagnetic particle imaging (MPI) is a tomograpic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are openly available for the research community and can be freely used. To facilate reproducable research all available information including a detailed description of the used pahntoms and the applied measurement sequences are provided.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets that covering the most interesting cases to get started with MPI. New datasets can be easily added and researcher wordwide  are invited to contribute own datasets. "
+    "text": "This site is still under construction. Please do not use until this message is removedMagnetic particle imaging (MPI) is a tomographic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are freely available for the research community. To facilitate reproducible research all available information including a detailed description of the used phantoms and the applied measurement sequences are provided.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets covering the most interesting cases to get started with MPI. New datasets can be easily added and researcher worldwide are invited to contribute own datasets."
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "License / Terms of Usage",
     "category": "section",
-    "text": "The source code of this project is licensed under the MIT license. All MPI data is licensed under the CC BY 4.0 license. This implies that you are free to use, share, and adapt the data. However, you must give appropriate credit. In particular we ask you to cite the MDF publication and ... TODO"
+    "text": "The source code of this project is licensed under the MIT license. All MPI data is licensed under the CC BY 4.0 license. This implies that you are free to use, share, and adapt the data. However, you must give appropriate credit by citing the project. In particular we ask you to cite the MDF publication"
 },
 
 {
@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Contribution",
     "category": "section",
-    "text": "We invite you to contribute to this project and provide your own MPI data. Please open an issue to discuss how to add your data to the project."
+    "text": "We invite you to contribute to this project and provide your own MPI data. Please open an issue to discuss how to add your data to the project. The CAD files of all phantoms can be downloaded to reproduce the phantoms using a suitable 3D printer. On request we also send hardcopies of the phantoms. "
 },
 
 {
@@ -46,6 +46,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Contact",
     "category": "section",
     "text": "If you have problems using the datasets, find mistakes, or have general questions please use the issue tracker to contact us. You can also contact Tobias Knopp directly."
+},
+
+{
+    "location": "index.html#Contributors-1",
+    "page": "Home",
+    "title": "Contributors",
+    "category": "section",
+    "text": "Matthias Gräser\nFlorian Griese\nTobias Knopp\nPatryk Szwargulski"
 },
 
 {
@@ -181,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Tracers",
     "category": "section",
-    "text": "Here we describe the tracers that have been used for the measurements"
+    "text": "As MPI is a tracer based imaging modality, it is important to relate all measurements to the tracer being used. Currently all datasets are measured with the same tracer."
 },
 
 {
@@ -189,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Perimag",
     "category": "section",
-    "text": "micromod: perimag<!– comment –>"
+    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable and can be directly ordered, which is essential for reproducible research."
 },
 
 {
