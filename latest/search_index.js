@@ -85,7 +85,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Datasets",
     "category": "section",
-    "text": "The datasets have been acquired with different scanners, tracers, measurements sequences and phantoms. To get an overview on all datasets you can download the following csv file:TODO same for calibrations"
+    "text": "The phantoms have been acquired with specific measurement sequences, MPI scanners, and tracer material.  In the following table an overview about all datasets is given:"
+},
+
+{
+    "location": "datasets.html#Phantom-Measurements-1",
+    "page": "Datasets",
+    "title": "Phantom Measurements",
+    "category": "section",
+    "text": "Study Experiment Number Scanner Sequence Tracer\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconePhantom 1 Bruker 1D Cartesian Perimag\nconePhantom 2 Bruker 2D Lissajous Perimag\nconePhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
+},
+
+{
+    "location": "datasets.html#Calibration-Measurements-1",
+    "page": "Datasets",
+    "title": "Calibration Measurements",
+    "category": "section",
+    "text": "Study Experiment Number Scanner Sequence Tracer\ncalibration 1 Bruker 1D Cartesian Perimag\ncalibration 2 Bruker 2D Lissajous Perimag\ncalibration 3 Bruker 3D Lissajous Perimag"
 },
 
 {
