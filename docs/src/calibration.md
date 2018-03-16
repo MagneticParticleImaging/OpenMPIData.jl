@@ -1,7 +1,7 @@
 # Calibration
 
 When using a system matrix based reconstruction algorithm one
-usually uses calibration data to setup the system matrix. In the 
+usually uses calibration data to setup the system matrix. In the
 following we describe measured calibration datasets.
 
 Each calibration dataset is acquired with a small sample of
@@ -20,8 +20,8 @@ FOV influencing the reconstruction result inside the FOV. The overscan
 may be manually shrinked prior to reconstruction
 
 
-Tracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm 
-Before each measurment a 30 minute Warm Up has been applied 
+Tracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm
+Before each measurment a 30 minute Warm Up has been applied
 # 1D Sequence
 
 | Parameter                  |     Value                                |
@@ -30,11 +30,10 @@ Before each measurment a 30 minute Warm Up has been applied
 | Drive-Field Frequency      |   2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99  |
 | Selection-Field Gradient   |   -1.0 T/m x -1.0 T/m x 2.0 T/m          |
 | Sampled Field of View      |   24 mm x 24 mm x 12 mm                  |
-| Gridsize                   |   24  x 24  x 24                         |
+| Grid size                   |   19  x 19  x 19                        |
 | Repetition Time            |    40.8 $\mu$s                           |
-| Number of Frames           |    1000                                  |
-| Number of Averages         |    ----                                  |
-| Number of Background Scans |    ----                                  |
+| Number of Averages         |    1000                                  |
+| Number of Background Scans |    362                                  |
 
 # 2D Lissajous Sequence
 
@@ -44,11 +43,10 @@ Before each measurment a 30 minute Warm Up has been applied
 | Drive-Field Frequency      |   2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99  |
 | Selection-Field Gradient   |   -1.0 T/m x -1.0 T/m x 2.0 T/m          |
 | Sampled Field of View      |   24 mm x 24 mm x 12 mm                  |
-| Gridsize                   |   24  x 24  x 24                         |
+| Grid size                   |   19  x 19  x 19                         |
 | Repetition Time            |    652.8 $\mu$s                          |
-| Number of Frames           |    1000                                  |
-| Number of Averages         |    ----                                  |
-| Number of Background Scans |    ----                                  |
+| Number of Averages         |    1000                                  |
+| Number of Background Scans |    362                                  |
 
 # 3D Lissajous Sequence
 | Parameter                  |     Value                                |
@@ -57,18 +55,18 @@ Before each measurment a 30 minute Warm Up has been applied
 | Drive-Field Frequency      |   2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99  |
 | Selection-Field Gradient   |   -1.0 T/m x -1.0 T/m x 2.0 T/m          |
 | Sampled Field of View      |   24 mm x 24 mm x 12 mm                  |
-| Gridsize                   |   24  x 24  x 24                         |
+| Grid size                   |   19  x 19  x 19                         |
 | Repetition Time            |    21.54 ms                              |
-| Number of Frames           |    1000                                  |
-| Number of Averages         |    ----                                  |
-| Number of Background Scans |    ----                                  |
+| Number of Averages         |    1000                                  |
+| Number of Background Scans |    362                                  |
 
 
 ## Transfer Function
 
-All datasets include the tranfer function of the receive chain. One has
+Currently the transfer function of the receive chain is not included in the measured data.
+However, we plan to include them in the datasets soon.
+
+<!--  All datasets include the transfer function of the receive chain. One has
 to divide the measured frequency data by this transfer function in order
 to get corrected signals. This is in particular important when interpreting
-time signals.
-
-
+time signals. -->
