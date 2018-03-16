@@ -3,7 +3,9 @@ export reconstruction, kaczmarzReg
 
 function reconstruction(filenameCalib, filenameMeas; 
                         iterations=1, lambda=0.1, SNRThresh=1.8, 
-                        minFreq=30e3, maxFreq=1.25e6, recChannels=1:3)
+                        minFreq=30e3, maxFreq=1.25e6, recChannels=1:3,
+                        frames=1:acqNumFrames(MPIFile(filenameMeas)),
+                        periods=1:acqNumPeriodsPerFrame(MPIFile(filenameMeas)))
 
   fCalib = MPIFile(filenameCalib)
   fMeas = MPIFile(filenameMeas)
@@ -19,8 +21,7 @@ function reconstruction(filenameCalib, filenameMeas;
   u = getMeasurementsFD(fMeas, frequencies=freq)
   println(size(u))
   # average over all temporal frames
-  #u = vec(mean(u,3))
-  u = vec(mean(u[:,9*1000:10*1000-1,:],2))
+  u = vec(mean(mean(u[:,periods,frames],2),3))
 
   lambda_ = calculateTraceOfNormalMatrix(S)*lambda/size(S,1)
   

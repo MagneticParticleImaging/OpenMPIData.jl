@@ -1,4 +1,4 @@
-export showMIPs,showProjs
+export showMIPs,showSlices
 
 
 function showMIPs(c::Array; fignum=1, filename=nothing)
@@ -25,11 +25,11 @@ function showMIPs(c::Array; fignum=1, filename=nothing)
     savefig(filename)
   end
 end
-function showProjs(c::Array,proj; fignum=1, filename=nothing)
+function showSlices(c::Array,slice; fignum=1, filename=nothing)
   cAbs = abs.(c)
-  x=proj[1]
-  y=proj[2]
-  z=proj[3]
+  x=slice[1]
+  y=slice[2]
+  z=slice[3]
 
   cxy = cAbs[:,:,z]
   cxz = cAbs[:,y,:]
@@ -39,13 +39,13 @@ function showProjs(c::Array,proj; fignum=1, filename=nothing)
   
   subplot(2,2,1)
   imshow(cxz', interpolation="nearest")
-  title("Proj $y xz")
+  title("Slice at y=$y xz")
   subplot(2,2,2)
   imshow(cyz', interpolation="nearest")
-  title("Proj $x yz")
+  title("Slice at x=$x yz")
   subplot(2,2,4)
   imshow(cxy, interpolation="nearest")
-  title("Proj $z xy")
+  title("Slice at z=$z xy")
 
   subplots_adjust(wspace=0.18,hspace=0.3,left=0.06,bottom=0.06,right=1.0,top=0.95)
 
