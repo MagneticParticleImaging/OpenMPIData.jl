@@ -189,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Perimag",
     "category": "section",
-    "text": "micromod: perimag<!–-comment–->"
+    "text": "micromod: perimag<!– comment –>"
 },
 
 {
@@ -205,35 +205,27 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "Sequences",
     "category": "section",
-    "text": "Several MPI measurement sequences have been used for data acquisition. All parameters are described in the following"
+    "text": "Several MPI measurement sequences have been used for data acquisition. The sequence parameters are listed below."
+},
+
+{
+    "location": "sequences.html#D-Sequence-1",
+    "page": "Sequences",
+    "title": "1D Sequence",
+    "category": "section",
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Patches 19 x 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
 },
 
 {
     "location": "sequences.html#D-Lissajous-Sequence-1",
     "page": "Sequences",
-    "title": "1D Lissajous Sequence",
+    "title": "2D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Frames 1000"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Patches 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
 },
 
 {
     "location": "sequences.html#D-Lissajous-Sequence-2",
-    "page": "Sequences",
-    "title": "2D Lissajous Sequence",
-    "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Frames 1000<!–-"
-},
-
-{
-    "location": "sequences.html#D-Cartesian-Sequence-1",
-    "page": "Sequences",
-    "title": "2D Cartesian Sequence",
-    "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 40.8 mus\nNumber of Frames 1000–->"
-},
-
-{
-    "location": "sequences.html#D-Lissajous-Sequence-3",
     "page": "Sequences",
     "title": "3D Lissajous Sequence",
     "category": "section",
@@ -253,7 +245,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "Calibration",
     "category": "section",
-    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the  following we describe measured calibration datasets.Each calibration dataset is acquired with a small sample of a specific tracer representing an image voxel. The delta sample is placed at various positions within the target FOV and calibration measurements are taken.Even for 1D and 2D sequences we measured the system matrix on a 3D grid. While this is not strictly necessary for image reconstruction it can be very usefull when studying the particle physics. It is advised to extract appropriate slices prior to reconstruction.All calibration datasets are also acquired outside the drive-field FOV. This \"overscanning\" is essential to avoid particles from outside the FOV influencing the reconstruction result inside the FOV. The overscan may be manually shrinked prior to reconstructionTracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm  Before each measurment a 30 minute Warm Up has been applied "
+    "text": "When using a system matrix based reconstruction algorithm one usually uses calibration data to setup the system matrix. In the following we describe measured calibration datasets.Each calibration dataset is acquired with a small sample of a specific tracer representing an image voxel. The delta sample is placed at various positions within the target FOV and calibration measurements are taken.Even for 1D and 2D sequences we measured the system matrix on a 3D grid. While this is not strictly necessary for image reconstruction it can be very usefull when studying the particle physics. It is advised to extract appropriate slices prior to reconstruction.All calibration datasets are also acquired outside the drive-field FOV. This \"overscanning\" is essential to avoid particles from outside the FOV influencing the reconstruction result inside the FOV. The overscan may be manually shrinked prior to reconstructionTracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm Before each measurment a 30 minute Warm Up has been applied"
 },
 
 {
@@ -261,7 +253,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "1D Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 40.8 mus\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGrid size 19  x 19  x 19\nRepetition Time 40.8 mus\nNumber of Averages 1000\nNumber of Background Scans 362"
 },
 
 {
@@ -269,7 +261,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "2D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 652.8 mus\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGrid size 19  x 19  x 19\nRepetition Time 652.8 mus\nNumber of Averages 1000\nNumber of Background Scans 362"
 },
 
 {
@@ -277,7 +269,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "3D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 12 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGridsize 24  x 24  x 24\nRepetition Time 21.54 ms\nNumber of Frames 1000\nNumber of Averages ––\nNumber of Background Scans ––"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 12 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nSampled Field of View 24 mm x 24 mm x 12 mm\nGrid size 19  x 19  x 19\nRepetition Time 21.54 ms\nNumber of Averages 1000\nNumber of Background Scans 362"
 },
 
 {
@@ -285,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Calibration",
     "title": "Transfer Function",
     "category": "section",
-    "text": "All datasets include the tranfer function of the receive chain. One has to divide the measured frequency data by this transfer function in order to get corrected signals. This is in particular important when interpreting time signals."
+    "text": "Currently the transfer function of the receive chain is not included in the measured data. However, we plan to include them in the datasets soon.<!–  All datasets include the transfer function of the receive chain. One has to divide the measured frequency data by this transfer function in order to get corrected signals. This is in particular important when interpreting time signals. –>"
 },
 
 ]}
