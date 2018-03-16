@@ -14,7 +14,7 @@ function downloadOpenMPIData()
            #"data/calibrations/2.mdf",
            "data/calibrations/3.mdf",
            "data/measurements/resolutionPhantom/3.mdf",
-           "data/measurements/conePhantom/3.mdf"
+           "data/measurements/conePhantom/3.mdf"]
 
   for file in files
     stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)

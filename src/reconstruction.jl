@@ -17,9 +17,10 @@ function reconstruction(filenameCalib, filenameMeas;
   S = getSystemMatrix(fCalib, freq, loadas32bit=true, bgCorrection=true)
 
   u = getMeasurementsFD(fMeas, frequencies=freq)
-
+  println(size(u))
   # average over all temporal frames
-  u = vec(mean(u,3))
+  #u = vec(mean(u,3))
+  u = vec(mean(u[:,9*1000:10*1000-1,:],2))
 
   lambda_ = calculateTraceOfNormalMatrix(S)*lambda/size(S,1)
   
