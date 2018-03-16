@@ -5,7 +5,7 @@ filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
 ### Cone Phantom
 # phantom = "conePhantom"
 ### Resolution Phantom
- phantom = "resolutionPhantom2D"
+ phantom = "resolutionPhantom"
 ### Concentration Phantom
 # phantom = "concentrationPhantom"
 
@@ -16,7 +16,7 @@ c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.0001,
                    minFreq=30e3, SNRThresh=1.8, recChannels=1:3)
 
 
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$phantom.png")
+filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)2D.png")
 #showMIPs(c[:,:,:,1],filename=filenameImage)
 proj=[9,9,9]
 showProjs(c[:,:,:,1],proj,filename=filenameImage)
