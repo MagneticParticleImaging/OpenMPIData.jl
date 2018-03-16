@@ -205,7 +205,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Perimag",
     "category": "section",
-    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable and can be directly ordered, which is essential for reproducible research."
+    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable to Resovist  and can be directly ordered, which is essential for reproducible research."
 },
 
 {
