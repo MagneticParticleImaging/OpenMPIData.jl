@@ -4,7 +4,7 @@ export reconstruction, kaczmarzReg
 function reconstruction(filenameCalib, filenameMeas; 
                         iterations=1, lambda=0.1, SNRThresh=1.8, 
                         minFreq=30e3, maxFreq=1.25e6, recChannels=1:3,
-                        frames=1:acqNumFrames(MPIFile(filenameMeas)),
+                        frames=1:acqNumFGFrames(MPIFile(filenameMeas)),
                         periods=1:acqNumPeriodsPerFrame(MPIFile(filenameMeas)))
 
   fCalib = MPIFile(filenameCalib)
@@ -18,7 +18,7 @@ function reconstruction(filenameCalib, filenameMeas;
 
   S = getSystemMatrix(fCalib, freq, loadas32bit=true, bgCorrection=true)
 
-  u = getMeasurementsFD(fMeas, frequencies=freq,periods=periods,frames=frames)
+  u = getMeasurementsFD(fMeas, frequencies=freq,periods=periods,frames=frames,bgcorrection=true)
   # average over all temporal frames
   u = vec(mean(mean(u,2),3))
 
