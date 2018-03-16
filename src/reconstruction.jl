@@ -5,7 +5,8 @@ function reconstruction(filenameCalib, filenameMeas;
                         iterations=1, lambda=0.1, SNRThresh=1.8, 
                         minFreq=30e3, maxFreq=1.25e6, recChannels=1:3,
                         frames=1:acqNumFGFrames(MPIFile(filenameMeas)),
-                        periods=1:acqNumPeriodsPerFrame(MPIFile(filenameMeas)))
+                        periods=1:acqNumPeriodsPerFrame(MPIFile(filenameMeas)),
+                        bgCorrection=true)
 
   fCalib = MPIFile(filenameCalib)
   fMeas = MPIFile(filenameMeas)
@@ -16,9 +17,9 @@ function reconstruction(filenameCalib, filenameMeas;
   freq = filterFrequencies(fCalib, SNRThresh=SNRThresh, minFreq=minFreq,
                            maxFreq=maxFreq, recChannels=recChannels) 
 
-  S = getSystemMatrix(fCalib, freq, loadas32bit=true, bgCorrection=true)
+  S = getSystemMatrix(fCalib, freq, bgCorrection=bgCorrection)
 
-  u = getMeasurementsFD(fMeas, frequencies=freq,periods=periods,frames=frames,bgcorrection=true)
+  u = getMeasurementsFD(fMeas, frequencies=freq,periods=periods,frames=frames,bgCorrection=bgCorrection)
   # average over all temporal frames
   u = vec(mean(mean(u,2),3))
 
