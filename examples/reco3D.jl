@@ -3,9 +3,9 @@ using OpenMPIData
 filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","3.mdf")
 
 ### Cone Phantom
-# phantom = "conePhantom"
+ phantom = "conePhantom"
 ### Resolution Phantom
- phantom = "resolutionPhantom"
+# phantom = "resolutionPhantom"
 ### Concentration Phantom
 # phantom = "concentrationPhantom"
 
@@ -17,8 +17,6 @@ c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.0001,
 
 filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$phantom.png")
 showMIPs(c[:,:,:,1],filename=filenameImage)
-
-~      
 
 
 
