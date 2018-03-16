@@ -77,7 +77,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Usage",
     "title": "Installation",
     "category": "section",
-    "text": "The provided MPI data can be read from any programming language like Matlab, Python, Julia, and C. On the MDF website example scripts for reading MDF data from Matlab, Python, and Julia are available.This project uses the programming language Julia for data downloading and example reconstructions. First you have to install Julia. Then open Julia and enterPkg.clone(\"https://github.com/MagneticParticleImaging/OpenMPIData.jl.git\")which will install the project. Then enterusing OpenMPIData\ndownloadOpenMPIData()The first command will import the OpenMPIData package, the second command will download all MPI data which can last several minutes up to hours depending on the speed of your internet connection.TODO: example reconstructionsTODO"
+    "text": "The provided MPI data can be read from any programming language like Matlab, Python, Julia, and C. On the MDF website example scripts for reading MDF data from Matlab, Python, and Julia are available.All data can be found under the following link. To simplify the data download and to provide example reconstructions this project also contains dedicated programming tools. These tools are written in the scientific programming language Julia and can be freely used. They are not strictly necessary if you want to use your own reconstruction methods.In order to install the programming tools you first have to install Julia in version 0.6. Then open Julia and enterPkg.clone(\"https://github.com/MagneticParticleImaging/OpenMPIData.jl.git\")which will install the package. Then enterusing OpenMPIData\ndownloadOpenMPIData()The first command will import the OpenMPIData package, the second command will download all MPI data which can last several minutes up to hours depending on the speed of your internet connection.The downloadOpenMPIData() function will not download some of the open MPI data. The high resolution MPI system functions need to be manually downloaded using the commanddownloadCalibrationDataHighRes()"
+},
+
+{
+    "location": "usage.html#Example-Reconstruction-1",
+    "page": "Usage",
+    "title": "Example Reconstruction",
+    "category": "section",
+    "text": "Once the data is downloaded one can execute one of the example reconstruction scriptsinclude(Pkg.dir(\"OpenMPIData\",\"examples/reco3D.jl\"))The content of this script is given belowusing OpenMPIData\n\nfilenameCalib = Pkg.dir(\"OpenMPIData\",\"data\",\"calibrations\",\"3.mdf\")\n\n### Resolution Phantom\nphantom = \"resolutionPhantom\"\n### Cone Phantom\n# phantom = \"conePhantom\"\n### Concentration Phantom\n# phantom = \"concentrationPhantom\"\n\nfilenameMeas = Pkg.dir(\"OpenMPIData\",\"data\",\"measurements\",phantom,\"3.mdf\")\n\n\nc = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.0001,\n                   minFreq=30e3, SNRThresh=1.8, recChannels=1:3)\n\nfilenameImage = Pkg.dir(\"OpenMPIData\",\"docs\",\"src\",\"assets\",\"$phantom.png\")\nshowMIPs(c[:,:,:,1],filename=filenameImage)Within the script one can chose different datasets by changing the phantom string. The OpenMPIData package contains a small reconstruction library that uses MPIFiles.jl for handling of MDF files."
 },
 
 {
