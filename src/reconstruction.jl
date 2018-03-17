@@ -16,7 +16,7 @@ function reconstruction(filenameCalib, filenameMeas;
   # should be used for reconstruction
   freq = filterFrequencies(fCalib, SNRThresh=SNRThresh, minFreq=minFreq,
                            maxFreq=maxFreq, recChannels=recChannels) 
-
+  
   S = getSystemMatrix(fCalib, freq, bgCorrection=bgCorrection)
 
   u = getMeasurementsFD(fMeas, frequencies=freq,periods=periods,frames=frames,bgCorrection=bgCorrection)
