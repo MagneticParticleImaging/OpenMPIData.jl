@@ -1,7 +1,6 @@
 using OpenMPIData
 
-#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","2.mdf")
+filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
 
 ### Cone Phantom
 #phantom = "conePhantom"
@@ -10,12 +9,11 @@ phantom = "resolutionPhantom"
 ### Concentration Phantom
 # phantom = "concentrationPhantom"
 
-#filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
-filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"2.mdf")
+filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
 
-numPatches=size(unflattenOffsetFieldShift(acqOffsetFieldShift(MPIFile(filenameMeas))[:,1,:]),1)
+numPatches = size(unflattenOffsetFieldShift(acqOffsetFieldShift(MPIFile(filenameMeas))[:,1,:]),1)
 
-C=zeros(19,19,numPatches)
+C = zeros(19,19,numPatches)
 
 for i=1:numPatches
  c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.01,
