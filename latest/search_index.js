@@ -229,7 +229,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "1D Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Patches 19 x 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 40.8 mus\nNumber of Patches 19 x 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
 },
 
 {
