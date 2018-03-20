@@ -15,9 +15,9 @@ By chosing different planes, one can determine the capable resolution due to dif
 
 ### CAD Data
 
-![SolidWorks Part File] (./phantoms/resolutionPhantom/Phantom1_Resolution.SLDPRT)
-![STL File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STL)
-![STEP File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STEP)
+[SolidWorks Part File] (./phantoms/resolutionPhantom/Phantom1_Resolution.SLDPRT)
+[STL File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STL)
+[STEP File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STEP)
 
 
 ## Concentration Phantom
@@ -43,9 +43,9 @@ The concentrations in the 8 sample chambers are the following:
 
 ### CAD Data
 
-![SolidWorks Part File] (./phantoms/concentrationPhantom/Phantom2_Concentration.SLDPRT)
-![STL File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STL)
-![STEP File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STEP)
+[SolidWorks Part File] (./phantoms/concentrationPhantom/Phantom2_Concentration.SLDPRT)
+[STL File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STL)
+[STEP File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STEP)
 
 ## Shape Phantom
 
@@ -57,6 +57,6 @@ To resemble a well known shape a cone defined by a **1 mm** radius tip and an ap
 
 ### CAD Data
 
-![SolidWorks Part File] (./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
-![STL File] (./phantoms/shapePhantom/Phantom3_Shape.STL)
-![STEP File] (./phantoms/shapePhantom/Phantom3_Shape.STEP)
+[SolidWorks Part File] (./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
+[STL File] (./phantoms/shapePhantom/Phantom3_Shape.STL)
+[STEP File] (./phantoms/shapePhantom/Phantom3_Shape.STEP)
