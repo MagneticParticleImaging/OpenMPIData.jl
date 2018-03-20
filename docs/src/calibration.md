@@ -20,7 +20,7 @@ FOV influencing the reconstruction result inside the FOV. The overscan
 may be manually shrinked prior to reconstruction
 
 
-Tracer Resovist (250 mmol), Delta Sample 2mm x 2mm x 1mm
+Tracer [Perimag](https://www.micromod.de/de/produkte-197-magnetisch_peri.html) (100 mmol), Delta Sample 2mm x 2mm x 1mm
 Before each measurment a 30 minute Warm Up has been applied
 # 1D Sequence
 
