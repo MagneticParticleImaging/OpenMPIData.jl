@@ -173,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "CAD Data",
     "category": "section",
-    "text": "SolidWorks Part File STL File STEP File"
+    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
 },
 
 {
@@ -189,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "CAD Data",
     "category": "section",
-    "text": "SolidWorks Part File STL File STEP File"
+    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
 },
 
 {
@@ -205,7 +205,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "CAD Data",
     "category": "section",
-    "text": "SolidWorks Part File STL File STEP File"
+    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
 },
 
 {
