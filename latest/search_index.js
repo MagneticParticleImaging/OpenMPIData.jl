@@ -157,7 +157,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Phantoms",
     "category": "section",
-    "text": "Here, we describe the phantoms being used during the MPI measurements."
+    "text": "Here, we describe the phantoms being used during the MPI measurements. All phantoms share the same robot mount defining the coordinate system. The robot mount is fixed in positive X direction. The flat side marks the positive Z direction. Poistive Y direction is then defined by right hand rule."
 },
 
 {
@@ -165,7 +165,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Resolution Phantom",
     "category": "section",
-    "text": "The resolution phantom consits of 5 tubes filled with Perimag featuring a concentration of 50 mmol. The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller () than in XY direction (). By chosing different planes, one can determine the capable resolution due to different distances of the tubes.(Image: Resolution Phantom)(Image: Resolution Phantom)"
+    "text": "The resolution phantom consits of 5 tubes filled with Perimag featuring a concentration of 50 mmol. The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller (10 deg and 15 deg) than in XY direction (20 deg and 30 deg). By chosing different planes, one can determine the capable resolution due to different distances of the tubes.(Image: Resolution Phantom)(Image: Resolution Phantom)"
+},
+
+{
+    "location": "phantoms.html#CAD-Data-1",
+    "page": "Phantoms",
+    "title": "CAD Data",
+    "category": "section",
+    "text": "SolidWorks Part File STL File STEP File"
 },
 
 {
@@ -177,11 +185,27 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "phantoms.html#CAD-Data-2",
+    "page": "Phantoms",
+    "title": "CAD Data",
+    "category": "section",
+    "text": "SolidWorks Part File STL File STEP File"
+},
+
+{
     "location": "phantoms.html#Shape-Phantom-1",
     "page": "Phantoms",
     "title": "Shape Phantom",
     "category": "section",
     "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)(Image: ShapePhantom)"
+},
+
+{
+    "location": "phantoms.html#CAD-Data-3",
+    "page": "Phantoms",
+    "title": "CAD Data",
+    "category": "section",
+    "text": "SolidWorks Part File STL File STEP File"
 },
 
 {
