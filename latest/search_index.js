@@ -117,7 +117,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Calibration Measurements",
     "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer\ncalibration 1 Bruker 1D Cartesian Perimag\ncalibration 2 Bruker 2D Lissajous Perimag\ncalibration 3 Bruker 3D Lissajous Perimag"
+    "text": "Study Experiment Number Scanner Sequence Tracer Grid FoV\ncalibration 1 Bruker 1D Cartesian Perimag 19x19x19 38x38x19\ncalibration 2 Bruker 2D Lissajous Perimag 19x19x19 38x38x19\ncalibration 3 Bruker 3D Lissajous Perimag 19x19x19 38x38x19\ncalibration 4 Bruker 1D Cartesian Perimag 37x37x37 37x37x18.5\ncalibration 5 Bruker 2D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 6 Bruker 3D Lissajous Perimag 37x37x37 37x37x18.5"
 },
 
 {
