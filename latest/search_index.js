@@ -157,7 +157,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Phantoms",
     "category": "section",
-    "text": "Here, we describe the phantoms being used during the MPI measurements. All phantoms share the same robot mount defining the coordinate system. The robot mount is fixed in positive X direction. The flat side marks the positive Z direction. Poistive Y direction is then defined by right hand rule."
+    "text": "Here, we describe the phantoms being used during the MPI measurements. The phantoms are all printed with the stereolithography 3D printing technique. All phantoms share the same robot mount defining the coordinate system. The robot mount is fixed in positive X direction. The flat side marks the positive Z direction. Poistive Y direction is then defined by right hand rule.You can download the phantoms construction files in the format .SLDPRT, .STL and .STEP."
 },
 
 {
@@ -169,11 +169,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "phantoms.html#CAD-Data-1",
+    "location": "phantoms.html#CAD-Data-Resolution-Phantom-1",
     "page": "Phantoms",
-    "title": "CAD Data",
+    "title": "CAD Data Resolution Phantom",
     "category": "section",
-    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
+    "text": "SolidWorks Part File STL File STEP File"
 },
 
 {
@@ -185,11 +185,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "phantoms.html#CAD-Data-2",
+    "location": "phantoms.html#CAD-Data-Concentration-Phantom-1",
     "page": "Phantoms",
-    "title": "CAD Data",
+    "title": "CAD Data Concentration Phantom",
     "category": "section",
-    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
+    "text": "SolidWorks Part File STL File STEP File"
 },
 
 {
@@ -201,11 +201,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "phantoms.html#CAD-Data-3",
+    "location": "phantoms.html#CAD-Data-Shape-Phantom-1",
     "page": "Phantoms",
-    "title": "CAD Data",
+    "title": "CAD Data Shape Phantom",
     "category": "section",
-    "text": "(Image: SolidWorks Part File) (Image: STL File) (Image: STEP File)"
+    "text": "SolidWorks Part File STL File STEP File"
 },
 
 {
