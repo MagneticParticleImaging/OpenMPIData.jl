@@ -1,6 +1,8 @@
 # Phantoms
 
-Here, we describe the phantoms being used during the MPI measurements. All phantoms share the same robot mount defining the coordinate system. The robot mount is fixed in positive X direction. The flat side marks the positive Z direction. Poistive Y direction is then defined by right hand rule.
+Here, we describe the phantoms being used during the MPI measurements. The phantoms are all printed with the stereolithography 3D printing technique. All phantoms share the same robot mount defining the coordinate system. The robot mount is fixed in positive X direction. The flat side marks the positive Z direction. Poistive Y direction is then defined by right hand rule.
+
+You can download the phantoms construction files in the format .SLDPRT, .STL and .STEP.
 
 
 ## Resolution Phantom
@@ -9,15 +11,15 @@ The resolution phantom consits of 5 tubes filled with **Perimag** featuring a co
 The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller (**10 deg and 15 deg**) than in XY direction (**20 deg and 30 deg**).
 By chosing different planes, one can determine the capable resolution due to different distances of the tubes.
 
-![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_1.JPG)
+![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_1Small.JPG)
 
 ![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_2.JPG)
 
-### CAD Data
+### CAD Data Resolution Phantom
 
-[SolidWorks Part File] (./phantoms/resolutionPhantom/Phantom1_Resolution.SLDPRT)
-[STL File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STL)
-[STEP File] (./phantoms/resolutionPhantom/Phantom1_Resolution.STEP)
+[SolidWorks Part File](./phantoms/resolutionPhantom/Phantom1_Resolution.SLDPRT)
+[STL File](./phantoms/resolutionPhantom/Phantom1_Resolution.STL)
+[STEP File](./phantoms/resolutionPhantom/Phantom1_Resolution.STEP)
 
 
 ## Concentration Phantom
@@ -41,11 +43,11 @@ The concentrations in the 8 sample chambers are the following:
 
 ![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom_1.JPG)
 
-### CAD Data
+### CAD Data Concentration Phantom
 
-[SolidWorks Part File] (./phantoms/concentrationPhantom/Phantom2_Concentration.SLDPRT)
-[STL File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STL)
-[STEP File] (./phantoms/concentrationPhantom/Phantom2_Concentration.STEP)
+[SolidWorks Part File](./phantoms/concentrationPhantom/Phantom2_Concentration.SLDPRT)
+[STL File](./phantoms/concentrationPhantom/Phantom2_Concentration.STL)
+[STEP File](./phantoms/concentrationPhantom/Phantom2_Concentration.STEP)
 
 ## Shape Phantom
 
@@ -55,8 +57,8 @@ To resemble a well known shape a cone defined by a **1 mm** radius tip and an ap
 
 ![ShapePhantom](./phantoms/shapePhantom/shapePhantom_2.JPG)
 
-### CAD Data
+### CAD Data Shape Phantom
 
-[SolidWorks Part File] (./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
-[STL File] (./phantoms/shapePhantom/Phantom3_Shape.STL)
-[STEP File] (./phantoms/shapePhantom/Phantom3_Shape.STEP)
+[SolidWorks Part File](./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
+[STL File](./phantoms/shapePhantom/Phantom3_Shape.STL)
+[STEP File](./phantoms/shapePhantom/Phantom3_Shape.STEP)
