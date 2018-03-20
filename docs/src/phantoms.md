@@ -28,16 +28,32 @@ The second phantom consists of 8 cubes of 2mm edge length resulting in **8µl vo
 We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise.
 The concentrations in the 8 sample chambers are the following:
 
-| Num. | Concentration |
-| ------------------ | ------ |
-| 1 | 100 mmol/l |
-| 2 | 66.6 mmol/l |
-| 3 | 44.4 mmol/l |
-| 4 | 29.6 mmol/l |
-| 5 | 19.7 mmol/l |
-| 6 | 13.1 mmol/l |
-| 7 | 8.77 mmol/l |
-| 8 | 5.85 mmol/l |
+ | Concentrations |
+| ------ |
+| 100 mmol/l |
+ | 66.6 mmol/l |
+| 44.4 mmol/l |
+| 29.6 mmol/l |
+| 19.7 mmol/l |
+ | 13.1 mmol/l |
+| 8.77 mmol/l |
+| 5.85 mmol/l |
+
+|Index in CAD Sketch| Concentrations |
+| ------ |-------|
+|1| 44.4 mmol/l  |
+|2| 100 mmol/l |
+|3| 29.6 mmol/l |
+|4| 8.77 mmol/l |
+|5| 19.7 mmol/l |
+|6| 66.6 mmol/l |
+|7| 13.1 mmol/l|
+|8| 5.85 mmol/l |
+
+![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung2.png)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung1.png)
+
+
 
 ![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom3small.png)
 
