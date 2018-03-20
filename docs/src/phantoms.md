@@ -11,9 +11,9 @@ The resolution phantom consits of 5 tubes filled with **Perimag** featuring a co
 The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller (**10 deg and 15 deg**) than in XY direction (**20 deg and 30 deg**).
 By chosing different planes, one can determine the capable resolution due to different distances of the tubes.
 
-![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_1Small.JPG)
+![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_1small.JPG)
 
-![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_2.JPG)
+![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_2small.JPG)
 
 ### CAD Data Resolution Phantom
 
@@ -39,9 +39,9 @@ The concentrations in the 8 sample chambers are the following:
 | 7 | 8.77 mmol/l |
 | 8 | 5.85 mmol/l |
 
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom3.png)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom3small.png)
 
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom2.jpg)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom2small.jpg)
 
 ### CAD Data Concentration Phantom
 
@@ -53,9 +53,9 @@ The concentrations in the 8 sample chambers are the following:
 
 To resemble a well known shape a cone defined by a **1 mm** radius tip and an apex angle of **10 deg** and a hight of **22 mm**. The total volume is **683.9 µL**. As tracer **Perimag** in a concentration of **50 mmol/L** were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)
 
-![ShapePhantom](./phantoms/shapePhantom/shapePhantom_1.JPG)
+![ShapePhantom](./phantoms/shapePhantom/shapePhantom_1small.JPG)
 
-![ShapePhantom](./phantoms/shapePhantom/shapePhantom_2.JPG)
+![ShapePhantom](./phantoms/shapePhantom/shapePhantom_2small.JPG)
 
 ### CAD Data Shape Phantom
 
