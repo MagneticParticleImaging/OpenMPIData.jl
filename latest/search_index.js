@@ -89,38 +89,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "datasets.html#",
-    "page": "Datasets",
-    "title": "Datasets",
-    "category": "page",
-    "text": ""
-},
-
-{
-    "location": "datasets.html#Datasets-1",
-    "page": "Datasets",
-    "title": "Datasets",
-    "category": "section",
-    "text": "The phantoms have been acquired with specific measurement sequences, MPI scanners, and tracer material.  In the following table an overview about all datasets is given:"
-},
-
-{
-    "location": "datasets.html#Phantom-Measurements-1",
-    "page": "Datasets",
-    "title": "Phantom Measurements",
-    "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconePhantom 1 Bruker 1D Cartesian Perimag\nconePhantom 2 Bruker 2D Lissajous Perimag\nconePhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
-},
-
-{
-    "location": "datasets.html#Calibration-Measurements-1",
-    "page": "Datasets",
-    "title": "Calibration Measurements",
-    "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer Grid FoV\ncalibration 1 Bruker 1D Cartesian Perimag 19x19x19 38x38x19\ncalibration 2 Bruker 2D Lissajous Perimag 19x19x19 38x38x19\ncalibration 3 Bruker 3D Lissajous Perimag 19x19x19 38x38x19\ncalibration 4 Bruker 1D Cartesian Perimag 37x37x37 37x37x18.5\ncalibration 5 Bruker 2D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 6 Bruker 3D Lissajous Perimag 37x37x37 37x37x18.5"
-},
-
-{
     "location": "scanners.html#",
     "page": "Scanners",
     "title": "Scanners",
@@ -142,6 +110,30 @@ var documenterSearchIndex = {"docs": [
     "title": "Bruker Preclinical MPI Scanner",
     "category": "section",
     "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 11.8 mm\nMaxDrive-Field Amplitude 14 mT x 14 mT x 14 mT\nMaxFocus-Field Amplitude 17 mT x 17 mT x 42 mT\nDrive-Field Frequency 2.5MHz/102 x 2.5MHz/96 x 2.5MHz/99\nMax Selection-Field Gradient -1.25 T/m x -1.25 T/m x 2.5 T/m\nRepetition Time 38.4 mus - 21.54 ms"
+},
+
+{
+    "location": "tracers.html#",
+    "page": "Tracers",
+    "title": "Tracers",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "tracers.html#Tracers-1",
+    "page": "Tracers",
+    "title": "Tracers",
+    "category": "section",
+    "text": "As MPI is a tracer based imaging modality, it is important to relate all measurements to the tracer being used. Currently all datasets are measured with the same tracer."
+},
+
+{
+    "location": "tracers.html#Perimag-1",
+    "page": "Tracers",
+    "title": "Perimag",
+    "category": "section",
+    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable to Resovist  and can be directly ordered, which is essential for reproducible research."
 },
 
 {
@@ -206,30 +198,6 @@ var documenterSearchIndex = {"docs": [
     "title": "CAD Data Shape Phantom",
     "category": "section",
     "text": "SolidWorks Part File STL File STEP File"
-},
-
-{
-    "location": "tracers.html#",
-    "page": "Tracers",
-    "title": "Tracers",
-    "category": "page",
-    "text": ""
-},
-
-{
-    "location": "tracers.html#Tracers-1",
-    "page": "Tracers",
-    "title": "Tracers",
-    "category": "section",
-    "text": "As MPI is a tracer based imaging modality, it is important to relate all measurements to the tracer being used. Currently all datasets are measured with the same tracer."
-},
-
-{
-    "location": "tracers.html#Perimag-1",
-    "page": "Tracers",
-    "title": "Perimag",
-    "category": "section",
-    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable to Resovist  and can be directly ordered, which is essential for reproducible research."
 },
 
 {
@@ -318,6 +286,78 @@ var documenterSearchIndex = {"docs": [
     "title": "Transfer Function",
     "category": "section",
     "text": "Currently the transfer function of the receive chain is not included in the measured data. However, we plan to include them in the datasets soon.<!–  All datasets include the transfer function of the receive chain. One has to divide the measured frequency data by this transfer function in order to get corrected signals. This is in particular important when interpreting time signals. –>"
+},
+
+{
+    "location": "datasets.html#",
+    "page": "Datasets",
+    "title": "Datasets",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "datasets.html#Datasets-1",
+    "page": "Datasets",
+    "title": "Datasets",
+    "category": "section",
+    "text": "The phantoms have been acquired with specific measurement sequences, MPI scanners, and tracer material.  In the following table an overview about all datasets is given:"
+},
+
+{
+    "location": "datasets.html#Phantom-Measurements-1",
+    "page": "Datasets",
+    "title": "Phantom Measurements",
+    "category": "section",
+    "text": "Study Experiment Number Scanner Sequence Tracer\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconePhantom 1 Bruker 1D Cartesian Perimag\nconePhantom 2 Bruker 2D Lissajous Perimag\nconePhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
+},
+
+{
+    "location": "datasets.html#Calibration-Measurements-1",
+    "page": "Datasets",
+    "title": "Calibration Measurements",
+    "category": "section",
+    "text": "Study Experiment Number Scanner Sequence Tracer Grid FoV\ncalibration 1 Bruker 1D Cartesian Perimag 19x19x19 38x38x19\ncalibration 2 Bruker 2D Lissajous Perimag 19x19x19 38x38x19\ncalibration 3 Bruker 3D Lissajous Perimag 19x19x19 38x38x19\ncalibration 4 Bruker 1D Cartesian Perimag 37x37x37 37x37x18.5\ncalibration 5 Bruker 2D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 6 Bruker 3D Lissajous Perimag 37x37x37 37x37x18.5"
+},
+
+{
+    "location": "reconstructions.html#",
+    "page": "Reconstruction",
+    "title": "Reconstruction",
+    "category": "page",
+    "text": ""
+},
+
+{
+    "location": "reconstructions.html#Reconstructions-1",
+    "page": "Reconstruction",
+    "title": "Reconstructions",
+    "category": "section",
+    "text": "Here we show you how the different phantom reconstructions for 1D sequence, 2D sequence and 3D seqguence look like."
+},
+
+{
+    "location": "reconstructions.html#Concentration-Phantom-Reconstruction-1",
+    "page": "Reconstruction",
+    "title": "Concentration Phantom Reconstruction",
+    "category": "section",
+    "text": "(Image: ShapePhantom)"
+},
+
+{
+    "location": "reconstructions.html#Reolution-Phantom-Reconstruction-1",
+    "page": "Reconstruction",
+    "title": "Reolution Phantom Reconstruction",
+    "category": "section",
+    "text": "(Image: ResolutionPhantom)(Image: ResolutionPhantom)"
+},
+
+{
+    "location": "reconstructions.html#Shape-Phantom-Reconstructions-1",
+    "page": "Reconstruction",
+    "title": "Shape Phantom Reconstructions",
+    "category": "section",
+    "text": "(Image: ShapePhantom)"
 },
 
 ]}
