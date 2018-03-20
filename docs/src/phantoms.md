@@ -39,9 +39,9 @@ The concentrations in the 8 sample chambers are the following:
 | 7 | 8.77 mmol/l |
 | 8 | 5.85 mmol/l |
 
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom_1.JPG)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom3.png)
 
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom_1.JPG)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom2.jpg)
 
 ### CAD Data Concentration Phantom
 
