@@ -337,11 +337,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "reconstructions.html#Concentration-Phantom-Reconstruction-1",
+    "location": "reconstructions.html#Shape-Phantom-Reconstructions-1",
     "page": "Reconstruction",
-    "title": "Concentration Phantom Reconstruction",
+    "title": "Shape Phantom Reconstructions",
     "category": "section",
-    "text": "(Image: ShapePhantom)"
+    "text": "(Image: ShapePhantom) (Image: ShapePhantom) (Image: ShapePhantom)"
 },
 
 {
@@ -349,15 +349,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Reconstruction",
     "title": "Reolution Phantom Reconstruction",
     "category": "section",
-    "text": "(Image: ResolutionPhantom)(Image: ResolutionPhantom)"
+    "text": "(Image: ResolutionPhantom) (Image: ResolutionPhantom) (Image: ResolutionPhantom)"
 },
 
 {
-    "location": "reconstructions.html#Shape-Phantom-Reconstructions-1",
+    "location": "reconstructions.html#Concentration-Phantom-Reconstruction-1",
     "page": "Reconstruction",
-    "title": "Shape Phantom Reconstructions",
+    "title": "Concentration Phantom Reconstruction",
     "category": "section",
-    "text": "(Image: ShapePhantom)"
+    "text": "(Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom)"
 },
 
 ]}
