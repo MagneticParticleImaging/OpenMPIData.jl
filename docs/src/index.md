@@ -30,8 +30,7 @@ you are free to use, share, and adapt the data. However, you must give appropria
 ## Contribution
 
 We invite you to contribute to this project and provide your own MPI data. Please open an
-[issue](https://github.com/MagneticParticleImaging/OpenMPIData.jl/issues) to discuss how
-to add your data to the project. The CAD files of all phantoms can be downloaded to reproduce the phantoms using a suitable 3D printer. On request we also send hardcopies of the phantoms. 
+[issue](https://github.com/MagneticParticleImaging/OpenMPIData.jl/issues) to discuss how to add your data to the project. The CAD files of all phantoms can be downloaded to reproduce the phantoms using a suitable 3D printer. On request we also send hardcopies of the phantoms.
 
 ## Contact
 
@@ -41,7 +40,7 @@ You can also contact [Tobias Knopp](https://www.tuhh.de/ibi/people/tobias-knopp.
 
 ## Contributors
 
-* Matthias Gräser
-* Florian Griese
-* Tobias Knopp
-* Patryk Szwargulski
+* [Matthias Gräser](https://www.tuhh.de/ibi/people/matthias-graeser.html)
+* [Florian Griese](https://www.tuhh.de/ibi/people/florian-griese.html)
+* [Tobias Knopp](https://www.tuhh.de/ibi/people/tobias-knopp-head-of-institute.html)
+* [Patryk Szwargulski](https://www.tuhh.de/ibi/people/patryk-szwargulski.html)
