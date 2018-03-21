@@ -27,7 +27,7 @@ for y=1:numPatchesY
     C[:,20-y,20-z]=c[:,div(SFsize[2],2)+1,div(SFsize[3],2)+1,1]
  end
 end
-mkpath("../data/reconstrcutions/$(phantom)/")
+mkpath( Pkg.dir("OpenMPIData","data/reconstructions/$(phantom)"))
 s=size(C)
 if phantom =="shapePhantom"
   filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction1D.png")
