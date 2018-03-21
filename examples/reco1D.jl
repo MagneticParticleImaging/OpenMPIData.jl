@@ -1,56 +1,67 @@
 using OpenMPIData
 
-#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","4.mdf")
+#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","1.mdf")
+#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","4.mdf")
+filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","1.mdf")
 
-### Cone Phantom
-#phantom = "conePhantom"
+### Shape Phantom
+ phantom = "shapePhantom"
 ### Resolution Phantom
-#phantom = "resolutionPhantom"
+# phantom = "resolutionPhantom"
 ### Concentration Phantom
- phantom = "concentrationPhantom"
+# phantom = "concentrationPhantom"
 
-#filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
+#filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"1.mdf")
 filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"1.mdf")
 
-numPatches=size(unflattenOffsetFieldShift(acqOffsetFieldShift(MPIFile(filenameMeas))[:,1,:]),1)
-
-
 #3D Volume
-#C=zeros(19,19,19)
-C=zeros(37,19,19)
+numPatchesY = 19
+numPatchesZ = 19
+SFsize=calibSize(MPIFile(filenameCalib))
+C=zeros(SFsize[1],numPatchesY,numPatchesZ)
 
-for y=1:19
- #println(y)
- for z=1:19
-   # print("$z,")
+for y=1:numPatchesY
+ for z=1:numPatchesZ
     st=(y-1)*19*1000+(z-1)*1000+1
-    c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambda=0.01,
+    c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambda=0.1,
                        minFreq=80e3, SNRThresh=5.0, recChannels=1:3,periods=st:st-1+1000,
                        bgCorrection=true)
-    #C[:,20-y,20-z]=c[:,10,10,1]
-    C[:,20-y,20-z]=c[:,18,18,1]
+    C[:,20-y,20-z]=c[:,div(SFsize[2],2)+1,div(SFsize[3],2)+1,1]
  end
 end
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)1D.png")
-slice=[10,10,10]
-showSlices(C,slice,filename=filenameImage)
 
+mkpath("../docs/src/reconstructions/$phantom/")
+s=size(C)
+if phantom =="shapePhantom"
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D.png")
+  showMIPs(C,filename=filenameImage)
+elseif phantom =="resolutionPhantom"
+  slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D.png")
+  showSlices(C,slice,filename=filenameImage)
+elseif phantom =="concentrationPhantom"
+  slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
+  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D_1.png")
+  showSlices(C,slice1,filename=filenameImage,fignum=1)
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D_2.png")
+  showSlices(C,slice2,filename=filenameImage,fignum=2)
+end
 
+#Single Patch 1D Reco
 #=
-#Single 1D
-
 z=10
 y=10
 st=(z-1)*19*1000+(y-1)*1000+1
+    c = reconstruction(filenameCalib, filenameMeas, iterations=5, lambda=0.1,
+                       minFreq=80e3, SNRThresh=3.0, recChannels=1:3,periods=st:st-1+1000,
+                       bgCorrection=true)
 
-c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambda=0.01,
-                    minFreq=80e3, SNRThresh=5.0, recChannels=1:3,periods=st:st-1+1000)
+slice=[div(SFsize[1],2)+1,div(SFsize[2],2)+1,div(SFsize[3],2)+1]
 
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)1D.png")
-slice=[10,10,10]
-showSlices(c[:,:,:,1],slice)#,filename=filenameImage)
+filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction$(phantom)1D_MIP.png")
+showMIPs(c[:,:,:,1],filename=filenameImage,fignum=1)
+
+filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction$(phantom)1D_Slice.png")
+showSlices(c[:,:,:,1],slice,filename=filenameImage,fignum=2)
 =#
-
-
-

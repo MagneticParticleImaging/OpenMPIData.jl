@@ -21,11 +21,14 @@ In addition several calibration measurements are available:
 
 ## Calibration Measurements
 
-| Study | Experiment Number | Scanner | Sequence | Tracer |
-|---|---|---|---|---|
-| calibration | 1 | Bruker | 1D Cartesian | Perimag |
-| calibration | 2 | Bruker | 2D Lissajous | Perimag |
-| calibration | 3 | Bruker | 3D Lissajous | Perimag |
+| Study | Experiment Number | Scanner | Sequence | Tracer | Grid | FoV |
+|---|---|---|---|---|---|---|
+| calibration | 1 | Bruker | 1D Cartesian | Perimag |19x19x19|38x38x19|
+| calibration | 2 | Bruker | 2D Lissajous | Perimag |19x19x19|38x38x19|
+| calibration | 3 | Bruker | 3D Lissajous | Perimag |19x19x19|38x38x19|
+| calibration | 4 | Bruker | 1D Cartesian | Perimag |37x37x37|37x37x18.5|
+| calibration | 5 | Bruker | 2D Lissajous | Perimag |37x37x37|37x37x18.5|
+| calibration | 6 | Bruker | 3D Lissajous | Perimag |37x37x37|37x37x18.5|
 
 
 

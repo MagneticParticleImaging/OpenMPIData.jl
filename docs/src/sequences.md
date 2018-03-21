@@ -10,7 +10,7 @@ acquisition. The sequence parameters are listed below.
 | Drive-Field Amplitude      |   12 mT x 0 mT x 0 mT                   |
 | Drive-Field Frequency      |   2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99  |
 | Selection-Field Gradient   |   -1.0 T/m x -1.0 T/m x 2.0 T/m          |
-| Repetition Time            |    652.8 $\mu$s                          |
+| Repetition Time            |    40.8 $\mu$s                          |
 | Number of Patches             |    19 x 19                      |
 | Number of Periods per Patches             |    1000                    |
 | Number of Frames           |    1                                  |

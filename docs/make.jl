@@ -8,12 +8,13 @@ makedocs(
     pages = [
         "Home" => "index.md",
         "Usage" => "usage.md",
-        "Datasets" => "datasets.md",
         "Scanners" => "scanners.md",
-        "Phantoms" => "phantoms.md",
         "Tracers" => "tracers.md",
+        "Phantoms" => "phantoms.md",
         "Sequences" => "sequences.md",
         "Calibration" => "calibration.md",
+        "Datasets" => "datasets.md",
+        "Reconstruction"=> "reconstructions.md"
     ],
 )
 
@@ -22,4 +23,3 @@ deploydocs(repo   = "github.com/MagneticParticleImaging/OpenMPIData.jl.git",
            target = "build",
            deps   = nothing,
            make   = nothing)
-

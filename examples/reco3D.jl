@@ -4,8 +4,8 @@ using OpenMPIData
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","6.mdf")#High Resolution
 filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","3.mdf")
 
-### Cone Phantom
-# phantom = "conePhantom"
+### Shape Phantom
+# phantom = "shapePhantom"
 ### Resolution Phantom
 # phantom = "resolutionPhantom"
 ### Concentration Phantom
@@ -17,25 +17,20 @@ filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,
 
 c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
                    minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
-
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$phantom.png")
-
+mkpath("../docs/src/reconstructions/$phantom/")
 s=size(c)
-
-if phantom =="conePhantom"
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)MIP.png")
+if phantom =="shapePhantom"
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D.png")
   showMIPs(c[:,:,:,1],filename=filenameImage)
 elseif phantom =="resolutionPhantom"
   slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)1.png")
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D.png")
   showSlices(c[:,:,:,1],slice,filename=filenameImage)
 elseif phantom =="concentrationPhantom"
   slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
-  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)1.png")
+  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,2*div(s[3],3)+1]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D_1.png")
   showSlices(c[:,:,:,1],slice1,filename=filenameImage,fignum=1)
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)2.png")
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D_2.png")
   showSlices(c[:,:,:,1],slice2,filename=filenameImage,fignum=2)
-else 
-  error("Wrong phantom selected. Please select conePhantom, resolutionPhantom or concentrationPhantom")
 end

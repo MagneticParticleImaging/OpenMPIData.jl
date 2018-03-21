@@ -1,44 +1,56 @@
 using OpenMPIData
 
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","5.mdf")
+#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","5.mdf")
+filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","2.mdf")
 
-### Cone Phantom
-#phantom = "conePhantom"
+### Shape Phantom
+ phantom = "shapePhantom"
 ### Resolution Phantom
-#phantom = "resolutionPhantom"
+# phantom = "resolutionPhantom"
 ### Concentration Phantom
- phantom = "concentrationPhantom"
+# phantom = "concentrationPhantom"
 
 #filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
 filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"2.mdf")
 
-numPatches=size(unflattenOffsetFieldShift(acqOffsetFieldShift(MPIFile(filenameMeas))[:,1,:]),1)
+numPatchesZ = 19
+SFsize=calibSize(MPIFile(filenameCalib))
+C=zeros(SFsize[1:2]...,numPatchesZ)
 
-#C=zeros(19,19,numPatches)
-C=zeros(37,37,numPatches)
-
-for i=1:numPatches
- c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.01,
+for i=1:numPatchesZ
+ c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.1,
                     minFreq=80e3, SNRThresh=3.0, recChannels=1:3,
                     periods=(i-1)*1000+1:i*1000,bgCorrection=true)
- #C[:,:,20-i]=c[:,:,10,1]
- C[:,:,20-i]=c[:,:,18,1]
+ C[:,:,20-i]=c[:,:,div(SFsize[3],2)+1,1]
 end
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)2D.png")
-slice=[10,10,10]
-showSlices(C,slice,filename=filenameImage)
 
+mkpath("../docs/src/reconstructions/$phantom/")
+s=size(C)
+if phantom =="shapePhantom"
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction2D.png")
+  showMIPs(C,filename=filenameImage)
+elseif phantom =="resolutionPhantom"
+  slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction2D.png")
+  showSlices(C,slice,filename=filenameImage)
+elseif phantom =="concentrationPhantom"
+  slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
+  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction2D_1.png")
+  showSlices(C,slice1,filename=filenameImage,fignum=1)
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction2D_2.png")
+  showSlices(C,slice2,filename=filenameImage,fignum=2)
+end
 
-
-#2D Reco
+#Single Patch 2D Reco
 #=
 st=10*1000+1
-c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.01,
-                   minFreq=80e3, SNRThresh=10.0, recChannels=1:3,periods=st:st-1+1000, bgCorrection=false)
+c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.1,
+                   minFreq=80e3, SNRThresh=3.0, recChannels=1:3,periods=st:st-1+1000, bgCorrection=true)
 
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)2D.png")
-slice=[10,10,10]
+filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction$(phantom)2D.png")
+slice=[div(SFsize[1],2)+1,div(SFsize[2],2)+1,div(SFsize[3],2)+1]
 showSlices(c[:,:,:,1],slice,filename=filenameImage)
 =#
      

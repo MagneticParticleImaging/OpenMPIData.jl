@@ -7,7 +7,7 @@ function makeFolders()
   mkpath(Pkg.dir("OpenMPIData","data","reconstructions"))
   mkpath(Pkg.dir("OpenMPIData","data","calibrations"))
   mkpath(Pkg.dir("OpenMPIData","data","measurements","resolutionPhantom"))
-  mkpath(Pkg.dir("OpenMPIData","data","measurements","conePhantom"))
+  mkpath(Pkg.dir("OpenMPIData","data","measurements","shapePhantom"))
   mkpath(Pkg.dir("OpenMPIData","data","measurements","concentrationPhantom"))
 end
 
@@ -23,7 +23,7 @@ function download1DData()
   makeFolders()
 
   files = ["data/measurements/resolutionPhantom/1.mdf",
-           "data/measurements/conePhantom/1.mdf",
+           "data/measurements/shapePhantom/1.mdf",
            "data/measurements/concentrationPhantom/1.mdf"]
 
   for file in files
@@ -35,7 +35,7 @@ function download2DData()
   makeFolders()
 
   files = ["data/measurements/resolutionPhantom/2.mdf",
-           "data/measurements/conePhantom/2.mdf",
+           "data/measurements/shapePhantom/2.mdf",
            "data/measurements/concentrationPhantom/2.mdf"]
 
   for file in files
@@ -47,7 +47,7 @@ end
 function download3DData()
   makeFolders()
   files = ["data/measurements/resolutionPhantom/3.mdf",
-           "data/measurements/conePhantom/3.mdf",
+           "data/measurements/shapePhantom/3.mdf",
            "data/measurements/concentrationPhantom/3.mdf"]
 
   for file in files
