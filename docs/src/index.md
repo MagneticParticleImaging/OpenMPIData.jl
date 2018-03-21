@@ -4,8 +4,6 @@ Initiative for open magnetic particle imaging data
 
 ## Introduction
 
-**This site is still under construction. Please do not use until this message is removed**
-
 Magnetic particle imaging (MPI) is a tomographic imaging technique that allows
 to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim
 of this project is to provide MPI data that are freely available for the research
@@ -25,7 +23,7 @@ are invited to contribute own datasets.
 
 The source code of this project is licensed under the MIT license. All MPI data is licensed
 under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. This implies that
-you are free to use, share, and adapt the data. However, you must give appropriate credit by citing the project. In particular we ask you to cite the [MDF publication](http://arxiv.org/abs/1602.06072)
+you are free to use, share, and adapt the data. However, you must give appropriate credit by citing the project. In particular we ask you to cite the [MDF publication](http://arxiv.org/abs/1602.06072).
 
 ## Contribution
 
