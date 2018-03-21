@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Contribution",
     "category": "section",
-    "text": "We invite you to contribute to this project and provide your own MPI data. Please open an issue to discuss how to add your data to the project. The CAD files of all phantoms can be downloaded to reproduce the phantoms using a suitable 3D printer. On request we also send hardcopies of the phantoms. "
+    "text": "We invite you to contribute to this project and provide your own MPI data. Please open an issue to discuss how to add your data to the project. The CAD files of all phantoms can be downloaded to reproduce the phantoms using a suitable 3D printer. On request we also send hardcopies of the phantoms."
 },
 
 {
@@ -157,7 +157,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Resolution Phantom",
     "category": "section",
-    "text": "The resolution phantom consits of 5 tubes filled with Perimag featuring a concentration of 50 mmol. The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller (10 deg and 15 deg) than in XY direction (20 deg and 30 deg). By chosing different planes, one can determine the capable resolution due to different distances of the tubes.(Image: Resolution Phantom)(Image: Resolution Phantom)"
+    "text": "The resolution phantom consits of 5 tubes filled with Perimag featuring a concentration of 50 mmol. The 5 tubes have a common origin on one side of the phantom. From there the extend in different angles from this origin within the XY and the YZ plane. As the imaging system features the strong gradient in Z direction the angles in the YZ plane are chosen smaller (10 deg and 15 deg) than in XY direction (20 deg and 30 deg). By chosing different planes, one can determine the capable resolution due to different distances of the tubes.(Image: Resolution Phantom)"
 },
 
 {
@@ -173,7 +173,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Concentration Phantom",
     "category": "section",
-    "text": "The second phantom consists of 8 cubes of 2mm edge length resulting in 8µl volume each. The distance of the cubes are 12 mm between centers (10 mm between edges)  within the XY plane and 6 between centers (4 mm between corners) within Z direction. We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise. The concentrations in the 8 sample chambers are the following:| Concentrations | | ––– | | 100 mmol/l |  | 66.6 mmol/l | | 44.4 mmol/l | | 29.6 mmol/l | | 19.7 mmol/l |  | 13.1 mmol/l | | 8.77 mmol/l | | 5.85 mmol/l |Index in CAD Sketch Concentrations\n1 44.4 mmol/l\n2 100 mmol/l\n3 29.6 mmol/l\n4 8.77 mmol/l\n5 19.7 mmol/l\n6 66.6 mmol/l\n7 13.1 mmol/l\n8 5.85 mmol/l(Image: ConcentrationPhantom) (Image: ConcentrationPhantom)(Image: ConcentrationPhantom)(Image: ConcentrationPhantom)"
+    "text": "The second phantom consists of 8 cubes of 2mm edge length resulting in 8µl volume each. The distance of the cubes are 12 mm between centers (10 mm between edges)  within the XY plane and 6 between centers (4 mm between corners) within Z direction. We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise. The concentrations in the 8 sample chambers are the following:| Concentrations |100 mmol/l | 66.6 mmol/l | 44.4 mmol/l | 29.6 mmol/l| 19.7 mmol/l | 13.1 mmol/l | 8.77 mmol/l | 5.85 mmol/l | | ––– |–––-| | Dilution factor | 0 | 1.5 | 2.25 | 3.375 | 5.0625 | 7.59375 | 11.390625 | 17.0859375 |Index in CAD Sketch Concentrations\n1 44.4 mmol/l\n2 100 mmol/l\n3 29.6 mmol/l\n4 8.77 mmol/l\n5 19.7 mmol/l\n6 66.6 mmol/l\n7 13.1 mmol/l\n8 5.85 mmol/l(Image: ConcentrationPhantom)"
 },
 
 {
@@ -189,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Phantoms",
     "title": "Shape Phantom",
     "category": "section",
-    "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)(Image: ShapePhantom)"
+    "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)"
 },
 
 {
