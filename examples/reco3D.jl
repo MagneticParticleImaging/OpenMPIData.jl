@@ -1,18 +1,16 @@
 using OpenMPIData
 
-#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","3.mdf")
+filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","3.mdf")
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","6.mdf")#High Resolution
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","3.mdf")
 
 ### Shape Phantom
-# phantom = "shapePhantom"
+ phantom = "shapePhantom"
 ### Resolution Phantom
 # phantom = "resolutionPhantom"
 ### Concentration Phantom
- phantom = "concentrationPhantom"
+# phantom = "concentrationPhantom"
 
-#filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
-filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"3.mdf")
+filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
 
 
 c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,

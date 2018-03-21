@@ -1,8 +1,7 @@
 using OpenMPIData
 
-#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
+filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","5.mdf")
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","2.mdf")
 
 ### Shape Phantom
  phantom = "shapePhantom"
@@ -11,8 +10,7 @@ filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","2.mdf"
 ### Concentration Phantom
 # phantom = "concentrationPhantom"
 
-#filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
-filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"2.mdf")
+filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
 
 numPatchesZ = 19
 SFsize=calibSize(MPIFile(filenameCalib))
