@@ -24,6 +24,14 @@ The `downloadOpenMPIData()` function will not download some of the open MPI data
 ```julia
 downloadCalibrationDataHighRes()
 ```
+To download the datasets for 1D, 2D, 3D or the system functions respectivly, use:
+```julia
+ download1DData()
+ download2DData()
+ download3DData()
+ downloadCalibrationDataLowRes()
+ downloadCalibrationDataHighRes()
+```
 
 ## Example Reconstruction
 
@@ -36,22 +44,45 @@ The content of this script is given below
 using OpenMPIData
 
 filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","3.mdf")
+#filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","6.mdf")#High Resolution
 
+### Shape Phantom
+# phantom = "shapePhantom"
 ### Resolution Phantom
-phantom = "resolutionPhantom"
-### Cone Phantom
-# phantom = "conePhantom"
+# phantom = "resolutionPhantom"
 ### Concentration Phantom
-# phantom = "concentrationPhantom"
+ phantom = "concentrationPhantom"
 
 filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
 
-
-c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.0001,
-                   minFreq=30e3, SNRThresh=1.8, recChannels=1:3)
-
-filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$phantom.png")
-showMIPs(c[:,:,:,1],filename=filenameImage)
+c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
+                   minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
+mkpath("../docs/src/reconstructions/$phantom/")
+s=size(c)
+if phantom =="shapePhantom"
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D.png")
+  showMIPs(c[:,:,:,1],filename=filenameImage)
+elseif phantom =="resolutionPhantom"
+  slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D.png")
+  showSlices(c[:,:,:,1],slice,filename=filenameImage)
+elseif phantom =="concentrationPhantom"
+  slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
+  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,2*div(s[3],3)+1]
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D_1.png")
+  showSlices(c[:,:,:,1],slice1,filename=filenameImage,fignum=1)
+  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction3D_2.png")
+  showSlices(c[:,:,:,1],slice2,filename=filenameImage,fignum=2)
+end
 ```
 
 Within the script one can chose different datasets by changing the `phantom` string. The OpenMPIData package contains a small reconstruction library that uses [MPIFiles.jl](https://github.com/MagneticParticleImaging/MPIFiles.jl) for handling of MDF files.
+To reconstruct the 1D or the 2D dataset use 
+```julia
+include(Pkg.dir("OpenMPIData","examples/reco1D.jl"))
+```
+or 
+```julia
+include(Pkg.dir("OpenMPIData","examples/reco2D.jl"))
+```
+The 1D and 2D reconstructions are performed patchwise and stiched to 3D-Volume afterwards.
