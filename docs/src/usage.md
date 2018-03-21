@@ -57,7 +57,7 @@ filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
 
 c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
                    minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
-mkpath("../data/reconstrcutions/$(phantom)/"
+mkpath("../data/reconstrcutions/$(phantom)/")
 s=size(c)
 if phantom =="shapePhantom"
   filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction3D.png")
@@ -77,11 +77,11 @@ end
 ```
 
 Within the script one can chose different datasets by changing the `phantom` string. The OpenMPIData package contains a small reconstruction library that uses [MPIFiles.jl](https://github.com/MagneticParticleImaging/MPIFiles.jl) for handling of MDF files.
-To reconstruct the 1D or the 2D dataset use 
+To reconstruct the 1D or the 2D dataset use
 ```julia
 include(Pkg.dir("OpenMPIData","examples/reco1D.jl"))
 ```
-or 
+or
 ```julia
 include(Pkg.dir("OpenMPIData","examples/reco2D.jl"))
 ```

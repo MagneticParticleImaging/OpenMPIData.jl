@@ -22,7 +22,7 @@ for i=1:numPatchesZ
                     periods=(i-1)*1000+1:i*1000,bgCorrection=true)
  C[:,:,20-i]=c[:,:,div(SFsize[3],2)+1,1]
 end
-mkpath("../data/reconstrcutions/$(phantom)/"
+mkpath("../data/reconstrcutions/$(phantom)/")
 s=size(C)
 if phantom =="shapePhantom"
   filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction2D.png")
@@ -52,7 +52,3 @@ showMIPs(c[:,:,:,1],filename=filenameImage,fignum=1)
 filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction$(phantom)2D_Slice.png")
 showSlices(c[:,:,:,1],slice,filename=filenameImage,fignum=2)
 =#
-     
-
-
-
