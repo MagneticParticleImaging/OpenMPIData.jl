@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "Introduction",
     "category": "section",
-    "text": "This site is still under construction. Please do not use until this message is removedMagnetic particle imaging (MPI) is a tomographic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are freely available for the research community. To facilitate reproducible research all available information including a detailed description of the used phantoms and the applied measurement sequences are provided.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets covering the most interesting cases to get started with MPI. New datasets can be easily added and researcher worldwide are invited to contribute own datasets."
+    "text": "Magnetic particle imaging (MPI) is a tomographic imaging technique that allows to determine the spatial distribution of magnetic nanoparticles (MNPs). The aim of this project is to provide MPI data that are freely available for the research community. To facilitate reproducible research all available information including a detailed description of the used phantoms and the applied measurement sequences are provided.All MPI data is stored in the MPI Data Format (MDF). The MDF provides a common data format for the storage of MPI raw data, calibration data, and reconstruction data.This projects comes with a first set of datasets covering the most interesting cases to get started with MPI. New datasets can be easily added and researcher worldwide are invited to contribute own datasets."
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Home",
     "title": "License / Terms of Usage",
     "category": "section",
-    "text": "The source code of this project is licensed under the MIT license. All MPI data is licensed under the CC BY 4.0 license. This implies that you are free to use, share, and adapt the data. However, you must give appropriate credit by citing the project. In particular we ask you to cite the MDF publication"
+    "text": "The source code of this project is licensed under the MIT license. All MPI data is licensed under the CC BY 4.0 license. This implies that you are free to use, share, and adapt the data. However, you must give appropriate credit by citing the project. In particular we ask you to cite the MDF publication."
 },
 
 {
