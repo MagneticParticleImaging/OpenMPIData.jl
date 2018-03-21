@@ -4,6 +4,17 @@ Here, we describe the phantoms being used during the MPI measurements. The phant
 
 You can download the phantoms construction files in the format .SLDPRT, .STL and .STEP.
 
+## Shape Phantom
+
+To resemble a well known shape a cone defined by a **1 mm** radius tip and an apex angle of **10 deg** and a hight of **22 mm**. The total volume is **683.9 µL**. As tracer **Perimag** in a concentration of **50 mmol/L** were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)
+
+![ShapePhantom](./phantoms/shapePhantom/shapePhantom_1small.JPG)
+
+### CAD Data Shape Phantom
+
+[SolidWorks Part File](./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
+[STL File](./phantoms/shapePhantom/Phantom3_Shape.STL)
+[STEP File](./phantoms/shapePhantom/Phantom3_Shape.STEP)
 
 ## Resolution Phantom
 
@@ -57,15 +68,3 @@ In the table below the concentrations have been assigned to the indices in the C
 [SolidWorks Part File](./phantoms/concentrationPhantom/Phantom2_Concentration.SLDPRT)
 [STL File](./phantoms/concentrationPhantom/Phantom2_Concentration.STL)
 [STEP File](./phantoms/concentrationPhantom/Phantom2_Concentration.STEP)
-
-## Shape Phantom
-
-To resemble a well known shape a cone defined by a **1 mm** radius tip and an apex angle of **10 deg** and a hight of **22 mm**. The total volume is **683.9 µL**. As tracer **Perimag** in a concentration of **50 mmol/L** were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)
-
-![ShapePhantom](./phantoms/shapePhantom/shapePhantom_1small.JPG)
-
-### CAD Data Shape Phantom
-
-[SolidWorks Part File](./phantoms/shapePhantom/Phantom3_Shape.SLDPRT)
-[STL File](./phantoms/shapePhantom/Phantom3_Shape.STL)
-[STEP File](./phantoms/shapePhantom/Phantom3_Shape.STEP)
