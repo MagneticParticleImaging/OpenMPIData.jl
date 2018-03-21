@@ -28,21 +28,20 @@ for y=1:numPatchesY
  end
 end
 
-mkpath("../docs/src/reconstructions/$phantom/")
 s=size(C)
 if phantom =="shapePhantom"
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D.png")
+  filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction1D.png")
   showMIPs(C,filename=filenameImage)
 elseif phantom =="resolutionPhantom"
   slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D.png")
+  filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction1D.png")
   showSlices(C,slice,filename=filenameImage)
 elseif phantom =="concentrationPhantom"
   slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
   slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D_1.png")
+  filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction1D_1.png")
   showSlices(C,slice1,filename=filenameImage,fignum=1)
-  filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction1D_2.png")
+  filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction1D_2.png")
   showSlices(C,slice2,filename=filenameImage,fignum=2)
 end
 
@@ -57,9 +56,9 @@ st=(z-1)*19*1000+(y-1)*1000+1
 
 slice=[div(SFsize[1],2)+1,div(SFsize[2],2)+1,div(SFsize[3],2)+1]
 
-filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction$(phantom)1D_MIP.png")
+filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction$(phantom)1D_MIP.png")
 showMIPs(c[:,:,:,1],filename=filenameImage,fignum=1)
 
-filenameImage = Pkg.dir("OpenMPIData","docs","src","reconstructions","$phantom","reconstruction$(phantom)1D_Slice.png")
+filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction$(phantom)1D_Slice.png")
 showSlices(c[:,:,:,1],slice,filename=filenameImage,fignum=2)
 =#
