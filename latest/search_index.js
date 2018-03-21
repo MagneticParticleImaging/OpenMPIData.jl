@@ -221,7 +221,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "1D Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 40.8 mus\nNumber of Patches 19 x 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 0 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 40.8 mus\nNumber of Patches 19 x 19\nNumber of Periods per Patches 1000\nNumber of Frames 1During the measurement of the 1D sequence the phantom was moved step-wise in the y-dimension and z-dimension with the robot. The movement was performed first in the z-dimension and then in the y-dimension. Each patch represents one robot position, in total 19x19=361 1D patches/positions."
 },
 
 {
@@ -229,7 +229,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Sequences",
     "title": "2D Lissajous Sequence",
     "category": "section",
-    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Patches 19\nNumber of Periods per Patches 1000\nNumber of Frames 1"
+    "text": "Parameter Value\nDrive-Field Amplitude 12 mT x 12 mT x 0 mT\nDrive-Field Frequency 2.5 MHz/102 x 2.5 Mhz/96 x 2.5 Mhz/99\nSelection-Field Gradient -1.0 T/m x -1.0 T/m x 2.0 T/m\nRepetition Time 652.8 mus\nNumber of Patches 19\nNumber of Periods per Patches 1000\nNumber of Frames 1During the measurement of the 2D sequence the phantom was moved step-wise in z-dimension with the robot. Each patch represents one robot position, in total 19 2D patches/positions."
 },
 
 {
@@ -341,7 +341,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Reconstruction",
     "title": "Shape Phantom Reconstructions",
     "category": "section",
-    "text": "(Image: ShapePhantom) (Image: ShapePhantom) (Image: ShapePhantom)"
+    "text": ""
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-1",
+    "page": "Reconstruction",
+    "title": "1D Reconstruction",
+    "category": "section",
+    "text": "(Image: ShapePhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-2",
+    "page": "Reconstruction",
+    "title": "2D Reconstruction",
+    "category": "section",
+    "text": "(Image: ShapePhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-3",
+    "page": "Reconstruction",
+    "title": "3D Reconstruction",
+    "category": "section",
+    "text": "(Image: ShapePhantom)"
 },
 
 {
@@ -349,7 +373,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Reconstruction",
     "title": "Reolution Phantom Reconstruction",
     "category": "section",
-    "text": "(Image: ResolutionPhantom) (Image: ResolutionPhantom) (Image: ResolutionPhantom)"
+    "text": ""
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-4",
+    "page": "Reconstruction",
+    "title": "1D Reconstruction",
+    "category": "section",
+    "text": "(Image: ResolutionPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-5",
+    "page": "Reconstruction",
+    "title": "2D Reconstruction",
+    "category": "section",
+    "text": "(Image: ResolutionPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-6",
+    "page": "Reconstruction",
+    "title": "3D Reconstruction",
+    "category": "section",
+    "text": "(Image: ResolutionPhantom)"
 },
 
 {
@@ -357,7 +405,55 @@ var documenterSearchIndex = {"docs": [
     "page": "Reconstruction",
     "title": "Concentration Phantom Reconstruction",
     "category": "section",
-    "text": "(Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom) (Image: ConcentrationPhantom)"
+    "text": ""
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-7,7,7-1",
+    "page": "Reconstruction",
+    "title": "1D Reconstruction Slice 7,7,7",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-13,13,13-1",
+    "page": "Reconstruction",
+    "title": "1D Reconstruction Slice 13,13,13",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-7,7,7-2",
+    "page": "Reconstruction",
+    "title": "2D Reconstruction Slice 7,7,7",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-13,13,13-2",
+    "page": "Reconstruction",
+    "title": "2D Reconstruction Slice 13,13,13",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-7,7,7-3",
+    "page": "Reconstruction",
+    "title": "3D Reconstruction Slice 7,7,7",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
+},
+
+{
+    "location": "reconstructions.html#D-Reconstruction-Slice-13,13,13-3",
+    "page": "Reconstruction",
+    "title": "3D Reconstruction Slice 13,13,13",
+    "category": "section",
+    "text": "(Image: ConcentrationPhantom)"
 },
 
 ]}
