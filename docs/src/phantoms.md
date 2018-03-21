@@ -23,25 +23,30 @@ By chosing different planes, one can determine the capable resolution due to dif
 ## Concentration Phantom
 
 The second phantom consists of 8 cubes of 2mm edge length resulting in **8µl volume** each. The distance of the cubes are **12 mm** between centers (10 mm between edges)  within the XY plane and 6 between centers (4 mm between corners) within Z direction.
-We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise.
-The concentrations in the 8 sample chambers are the following:
+We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise. The concentrations in the 8 sample chambers are diluted with a factor of 1.5 in each step and the values are given in the following table:
 
-| Concentrations |100 mmol/l | 66.6 mmol/l | 44.4 mmol/l | 29.6 mmol/l| 19.7 mmol/l | 13.1 mmol/l | 8.77 mmol/l | 5.85 mmol/l |
+|Concentrations| Dilution factor |
 | ------ |-------|
-| Dilution factor | 0 | 1.5 | 2.25 | 3.375 | 5.0625 | 7.59375 | 11.390625 | 17.0859375 |
+| 100 mmol/l  | 0 |
+| 66.6 mmol/l | 1.5 |
+| 44.4 mmol/l | 2.25 |
+| 29.6 mmol/l |3.375 |
+| 19.7 mmol/l |5.0625 |
+| 13.1 mmol/l |7.59375 |
+| 8.77 mmol/l |11.390625 |
+| 5.85 mmol/l |17.0859375 |
 
-
-
+In the table below the concentrations have been assigned to the indices in the CAD sketch to specify which concentration is placed in which chamber.
 
 |Index in CAD Sketch| Concentrations |
 | ------ |-------|
 |1| 44.4 mmol/l  |
-|2| 100 mmol/l |
+|2| 100 mmol/l  |
 |3| 29.6 mmol/l |
 |4| 8.77 mmol/l |
 |5| 19.7 mmol/l |
 |6| 66.6 mmol/l |
-|7| 13.1 mmol/l|
+|7| 13.1 mmol/l |
 |8| 5.85 mmol/l |
 
 ![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung1Both.png)
