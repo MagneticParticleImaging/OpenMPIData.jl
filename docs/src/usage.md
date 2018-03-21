@@ -47,11 +47,11 @@ filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","3.mdf")
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","6.mdf")#High Resolution
 
 ### Shape Phantom
-# phantom = "shapePhantom"
+ phantom = "shapePhantom"
 ### Resolution Phantom
 # phantom = "resolutionPhantom"
 ### Concentration Phantom
- phantom = "concentrationPhantom"
+# phantom = "concentrationPhantom"
 
 filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
 
