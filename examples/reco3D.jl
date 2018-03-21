@@ -15,6 +15,7 @@ filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"3.mdf")
 
 c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
                    minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
+mkpath("../data/reconstrcutions/$(phantom)/"
 s=size(c)
 if phantom =="shapePhantom"
   filenameImage = Pkg.dir("OpenMPIData","data","reconstructions","$phantom","reconstruction3D.png")
