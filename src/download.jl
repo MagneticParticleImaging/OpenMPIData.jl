@@ -12,16 +12,31 @@ function makeFolders()
 end
 
 function downloadOpenMPIData()
+  download1DData()
   download2DData()
   download3DData()
   downloadCalibrationDataLowRes()
   #downloadCalibrationDataHighRes()  # This should be done explicitely
 end
 
+function download1DData()
+  makeFolders()
+
+  files = ["data/measurements/resolutionPhantom/1.mdf",
+           "data/measurements/conePhantom/1.mdf",
+           "data/measurements/concentrationPhantom/1.mdf"]
+
+  for file in files
+    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
+    save(stream, Pkg.dir("OpenMPIData",file))
+  end
+end
 function download2DData()
   makeFolders()
 
-  files = ["data/measurements/resolutionPhantom/2.mdf"]
+  files = ["data/measurements/resolutionPhantom/2.mdf",
+           "data/measurements/conePhantom/2.mdf",
+           "data/measurements/concentrationPhantom/2.mdf"]
 
   for file in files
     stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
@@ -31,9 +46,9 @@ end
 
 function download3DData()
   makeFolders()
-
   files = ["data/measurements/resolutionPhantom/3.mdf",
-           "data/measurements/conePhantom/3.mdf"]
+           "data/measurements/conePhantom/3.mdf",
+           "data/measurements/concentrationPhantom/3.mdf"]
 
   for file in files
     stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)

@@ -1,14 +1,14 @@
 using OpenMPIData
 
 #filenameCalib = Pkg.dir("OpenMPIData","data","calibrations","2.mdf")
-filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","1.mdf")
+filenameCalib = Pkg.dir("/mnt/results/OpenMPIData","data","calibrations","4.mdf")
 
 ### Cone Phantom
 #phantom = "conePhantom"
 ### Resolution Phantom
-phantom = "resolutionPhantom"
+#phantom = "resolutionPhantom"
 ### Concentration Phantom
-# phantom = "concentrationPhantom"
+ phantom = "concentrationPhantom"
 
 #filenameMeas = Pkg.dir("OpenMPIData","data","measurements",phantom,"2.mdf")
 filenameMeas = Pkg.dir("/mnt/results/OpenMPIData","data","measurements",phantom,"1.mdf")
@@ -17,7 +17,8 @@ numPatches=size(unflattenOffsetFieldShift(acqOffsetFieldShift(MPIFile(filenameMe
 
 
 #3D Volume
-C=zeros(19,19,19)
+#C=zeros(19,19,19)
+C=zeros(37,19,19)
 
 for y=1:19
  #println(y)
@@ -27,7 +28,8 @@ for y=1:19
     c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambda=0.01,
                        minFreq=80e3, SNRThresh=5.0, recChannels=1:3,periods=st:st-1+1000,
                        bgCorrection=true)
-    C[:,20-y,20-z]=c[:,10,10,1]
+    #C[:,20-y,20-z]=c[:,10,10,1]
+    C[:,20-y,20-z]=c[:,18,18,1]
  end
 end
 filenameImage = Pkg.dir("OpenMPIData","docs","src","assets","$(phantom)1D.png")
