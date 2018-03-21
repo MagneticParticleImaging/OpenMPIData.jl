@@ -13,8 +13,6 @@ By chosing different planes, one can determine the capable resolution due to dif
 
 ![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_1small.JPG)
 
-![Resolution Phantom](./phantoms/resolutionPhantom/resolutionPhantom_2small.JPG)
-
 ### CAD Data Resolution Phantom
 
 [SolidWorks Part File](./phantoms/resolutionPhantom/Phantom1_Resolution.SLDPRT)
@@ -28,16 +26,12 @@ The second phantom consists of 8 cubes of 2mm edge length resulting in **8µl vo
 We name the sample chambers 1 to 8 starting with the top layer on the front left (positive X and Y direction), counting clockwise. Then starting with the lower layer with number 5 on the front left (positive X and Y direction), counting clockwise.
 The concentrations in the 8 sample chambers are the following:
 
- | Concentrations |
-| ------ |
-| 100 mmol/l |
- | 66.6 mmol/l |
-| 44.4 mmol/l |
-| 29.6 mmol/l |
-| 19.7 mmol/l |
- | 13.1 mmol/l |
-| 8.77 mmol/l |
-| 5.85 mmol/l |
+| Concentrations |100 mmol/l | 66.6 mmol/l | 44.4 mmol/l | 29.6 mmol/l| 19.7 mmol/l | 13.1 mmol/l | 8.77 mmol/l | 5.85 mmol/l |
+| ------ |-------|
+| Dilution factor | 0 | 1.5 | 2.25 | 3.375 | 5.0625 | 7.59375 | 11.390625 | 17.0859375 |
+
+
+
 
 |Index in CAD Sketch| Concentrations |
 | ------ |-------|
@@ -50,14 +44,8 @@ The concentrations in the 8 sample chambers are the following:
 |7| 13.1 mmol/l|
 |8| 5.85 mmol/l |
 
-![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung2.png)
-![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung1.png)
+![ConcentrationPhantom](./phantoms/concentrationPhantom/PhantomKonzzuordnung1Both.png)
 
-
-
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom3small.png)
-
-![ConcentrationPhantom](./phantoms/concentrationPhantom/concentrationPhantom2small.jpg)
 
 ### CAD Data Concentration Phantom
 
@@ -70,8 +58,6 @@ The concentrations in the 8 sample chambers are the following:
 To resemble a well known shape a cone defined by a **1 mm** radius tip and an apex angle of **10 deg** and a hight of **22 mm**. The total volume is **683.9 µL**. As tracer **Perimag** in a concentration of **50 mmol/L** were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)
 
 ![ShapePhantom](./phantoms/shapePhantom/shapePhantom_1small.JPG)
-
-![ShapePhantom](./phantoms/shapePhantom/shapePhantom_2small.JPG)
 
 ### CAD Data Shape Phantom
 
