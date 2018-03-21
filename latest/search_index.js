@@ -153,6 +153,22 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "phantoms.html#Shape-Phantom-1",
+    "page": "Phantoms",
+    "title": "Shape Phantom",
+    "category": "section",
+    "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)"
+},
+
+{
+    "location": "phantoms.html#CAD-Data-Shape-Phantom-1",
+    "page": "Phantoms",
+    "title": "CAD Data Shape Phantom",
+    "category": "section",
+    "text": "SolidWorks Part File STL File STEP File"
+},
+
+{
     "location": "phantoms.html#Resolution-Phantom-1",
     "page": "Phantoms",
     "title": "Resolution Phantom",
@@ -180,22 +196,6 @@ var documenterSearchIndex = {"docs": [
     "location": "phantoms.html#CAD-Data-Concentration-Phantom-1",
     "page": "Phantoms",
     "title": "CAD Data Concentration Phantom",
-    "category": "section",
-    "text": "SolidWorks Part File STL File STEP File"
-},
-
-{
-    "location": "phantoms.html#Shape-Phantom-1",
-    "page": "Phantoms",
-    "title": "Shape Phantom",
-    "category": "section",
-    "text": "To resemble a well known shape a cone defined by a 1 mm radius tip and an apex angle of 10 deg and a hight of 22 mm. The total volume is 683.9 µL. As tracer Perimag in a concentration of 50 mmol/L were used. The phantom can be rendered in 3D resemling the cone or can be cut in a layer view to see either a circle (YZ plane) or a triangle with flattened tip (XZ or XY plane)(Image: ShapePhantom)"
-},
-
-{
-    "location": "phantoms.html#CAD-Data-Shape-Phantom-1",
-    "page": "Phantoms",
-    "title": "CAD Data Shape Phantom",
     "category": "section",
     "text": "SolidWorks Part File STL File STEP File"
 },
@@ -301,7 +301,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Datasets",
     "category": "section",
-    "text": "The phantoms have been acquired with specific measurement sequences, MPI scanners, and tracer material.  In the following table an overview about all datasets is given:"
+    "text": "The phantoms have been acquired with specific measurement sequences, MPI scanners, and tracer material. In the following table an overview about all datasets is given:"
 },
 
 {
@@ -309,7 +309,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Phantom Measurements",
     "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconePhantom 1 Bruker 1D Cartesian Perimag\nconePhantom 2 Bruker 2D Lissajous Perimag\nconePhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
+    "text": "Study Experiment Number Scanner Sequence Tracer\nshapePhantom 1 Bruker 1D Cartesian Perimag\nshapePhantom 2 Bruker 2D Lissajous Perimag\nshapePhantom 3 Bruker 3D Lissajous Perimag\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
 },
 
 {
