@@ -20,7 +20,7 @@ filenameMeas = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;measuremen
 
 c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
                    minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
-mkpath(&quot;../data/reconstrcutions/$(phantom)/&quot;
+mkpath(&quot;../data/reconstrcutions/$(phantom)/&quot;)
 s=size(c)
 if phantom ==&quot;shapePhantom&quot;
   filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D.png&quot;)
@@ -36,4 +36,4 @@ elseif phantom ==&quot;concentrationPhantom&quot;
   showSlices(c[:,:,:,1],slice1,filename=filenameImage,fignum=1)
   filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D_2.png&quot;)
   showSlices(c[:,:,:,1],slice2,filename=filenameImage,fignum=2)
-end</code></pre><p>Within the script one can chose different datasets by changing the <code>phantom</code> string. The OpenMPIData package contains a small reconstruction library that uses <a href="https://github.com/MagneticParticleImaging/MPIFiles.jl">MPIFiles.jl</a> for handling of MDF files. To reconstruct the 1D or the 2D dataset use </p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco1D.jl&quot;))</code></pre><p>or </p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco2D.jl&quot;))</code></pre><p>The 1D and 2D reconstructions are performed patchwise and stiched to 3D-Volume afterwards.</p><footer><hr/><a class="previous" href="index.html"><span class="direction">Previous</span><span class="title">Home</span></a><a class="next" href="scanners.html"><span class="direction">Next</span><span class="title">Scanners</span></a></footer></article></body></html>
+end</code></pre><p>Within the script one can chose different datasets by changing the <code>phantom</code> string. The OpenMPIData package contains a small reconstruction library that uses <a href="https://github.com/MagneticParticleImaging/MPIFiles.jl">MPIFiles.jl</a> for handling of MDF files. To reconstruct the 1D or the 2D dataset use</p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco1D.jl&quot;))</code></pre><p>or</p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco2D.jl&quot;))</code></pre><p>The 1D and 2D reconstructions are performed patchwise and stiched to 3D-Volume afterwards.</p><footer><hr/><a class="previous" href="index.html"><span class="direction">Previous</span><span class="title">Home</span></a><a class="next" href="scanners.html"><span class="direction">Next</span><span class="title">Scanners</span></a></footer></article></body></html>
