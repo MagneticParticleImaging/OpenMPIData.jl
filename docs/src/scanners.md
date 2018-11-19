@@ -12,7 +12,7 @@ flexible measurement sequencies. The system parameters are given below
 
 | Parameter                     |     Value                           |
 | ------------------------------| ------------------------------------|
-| Scanner Bore Diameter         |   11.8 mm                           |
+| Scanner Bore Diameter         |   118 mm                            |
 | MaxDrive-Field Amplitude      |   14 mT x 14 mT x 14 mT             |
 | MaxFocus-Field Amplitude      |   17 mT x 17 mT x 42 mT             |
 | Drive-Field Frequency         |   2.5MHz/102 x 2.5MHz/96 x 2.5MHz/99|
