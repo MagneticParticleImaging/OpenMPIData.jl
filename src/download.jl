@@ -1,14 +1,16 @@
 using Pkg, HTTP
 
 export downloadOpenMPIData, downloadCalibrationDataHighRes, downloadCalibrationDataLowRes,
-       download2DData, download3DData
+       download2DData, download3DData, basedir
+
+basedir() =  joinpath(dirname(pathof(OpenMPIData)),"..")
 
 function makeFolders()
-  mkpath(Pkg.dir("OpenMPIData","data","reconstructions"))
-  mkpath(Pkg.dir("OpenMPIData","data","calibrations"))
-  mkpath(Pkg.dir("OpenMPIData","data","measurements","resolutionPhantom"))
-  mkpath(Pkg.dir("OpenMPIData","data","measurements","shapePhantom"))
-  mkpath(Pkg.dir("OpenMPIData","data","measurements","concentrationPhantom"))
+  mkpath(joinpath(basedir(),"data","reconstructions"))
+  mkpath(joinpath(basedir(),"data","calibrations"))
+  mkpath(joinpath(basedir(),"data","measurements","resolutionPhantom"))
+  mkpath(joinpath(basedir(),"data","measurements","shapePhantom"))
+  mkpath(joinpath(basedir(),"data","measurements","concentrationPhantom"))
 end
 
 function downloadOpenMPIData()
@@ -28,7 +30,7 @@ function download1DData()
 
   for file in files
     HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
-      open(Pkg.dir("OpenMPIData",file), "w") do file
+      open(joinpath(basedir(),file), "w") do file
         write(file, http)
       end
     end
@@ -43,7 +45,7 @@ function download2DData()
 
   for file in files
     HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
-      open(Pkg.dir("OpenMPIData",file), "w") do file
+      open(joinpath(basedir(),file), "w") do file
         write(file, http)
       end
     end
@@ -58,7 +60,7 @@ function download3DData()
 
   for file in files
     HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
-      open(Pkg.dir("OpenMPIData",file), "w") do file
+      open(joinpath(basedir(),file), "w") do file
         write(file, http)
       end
     end
@@ -74,7 +76,7 @@ function downloadCalibrationDataLowRes()
 
   for file in files
     HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
-      open(Pkg.dir("OpenMPIData",file), "w") do file
+      open(joinpath(basedir(),file), "w") do file
         write(file, http)
       end
     end
@@ -90,7 +92,7 @@ function downloadCalibrationDataHighRes()
 
   for file in files
     HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
-      open(Pkg.dir("OpenMPIData",file), "w") do file
+      open(joinpath(basedir(),file), "w") do file
         write(file, http)
       end
     end
