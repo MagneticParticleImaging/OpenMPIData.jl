@@ -8,9 +8,10 @@ for reading MDF data from Matlab, Python, and Julia are available.
 
 All data can be found under the following [link](https://media.tuhh.de/ibi/openMPIData/data/). To simplify the data download and to provide example reconstructions this project also contains dedicated programming tools. These tools are written in the scientific programming language Julia and can be freely used. They are not strictly necessary if you want to use your own reconstruction methods.
 
-In order to install the programming tools you first have to install [Julia](http://julialang.org/downloads/) in version 0.6. Then open Julia and enter
+In order to install the programming tools you first have to install [Julia](http://julialang.org/downloads/) in version 1.1 or newer. Then open Julia and enter
 ```julia
-Pkg.clone("https://github.com/MagneticParticleImaging/OpenMPIData.jl.git")
+using Pkg
+Pkg.add(PackageSpec(url="https://github.com/MagneticParticleImaging/OpenMPIData.jl.git"))
 ```
 which will install the package. Then enter
 ```julia
@@ -20,11 +21,11 @@ downloadOpenMPIData()
 The first command will import the OpenMPIData package, the second command will download all MPI
 data which can last several minutes up to hours depending on the speed of your internet connection.
 
-The `downloadOpenMPIData()` function will not download some of the open MPI data. The high resolution MPI system functions need to be manually downloaded using the command
+The `downloadOpenMPIData()` function will not download all of the open MPI data. The high resolution MPI system functions need to be manually downloaded using the command
 ```julia
 downloadCalibrationDataHighRes()
 ```
-To download the datasets for 1D, 2D, 3D or the system functions respectivly, use:
+To download the datasets for 1D, 2D, 3D or the system functions individually, use:
 ```julia
  download1DData()
  download2DData()
