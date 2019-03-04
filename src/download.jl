@@ -1,4 +1,4 @@
-using Requests
+using Pkg, HTTP
 
 export downloadOpenMPIData, downloadCalibrationDataHighRes, downloadCalibrationDataLowRes,
        download2DData, download3DData
@@ -27,8 +27,11 @@ function download1DData()
            "data/measurements/concentrationPhantom/1.mdf"]
 
   for file in files
-    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
-    save(stream, Pkg.dir("OpenMPIData",file))
+    HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
+      open(Pkg.dir("OpenMPIData",file), "w") do file
+        write(file, http)
+      end
+    end
   end
 end
 function download2DData()
@@ -39,8 +42,11 @@ function download2DData()
            "data/measurements/concentrationPhantom/2.mdf"]
 
   for file in files
-    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
-    save(stream, Pkg.dir("OpenMPIData",file))
+    HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
+      open(Pkg.dir("OpenMPIData",file), "w") do file
+        write(file, http)
+      end
+    end
   end
 end
 
@@ -51,8 +57,11 @@ function download3DData()
            "data/measurements/concentrationPhantom/3.mdf"]
 
   for file in files
-    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
-    save(stream, Pkg.dir("OpenMPIData",file))
+    HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
+      open(Pkg.dir("OpenMPIData",file), "w") do file
+        write(file, http)
+      end
+    end
   end
 end
 
@@ -64,8 +73,11 @@ function downloadCalibrationDataLowRes()
            "data/calibrations/3.mdf",]
 
   for file in files
-    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
-    save(stream, Pkg.dir("OpenMPIData",file))
+    HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
+      open(Pkg.dir("OpenMPIData",file), "w") do file
+        write(file, http)
+      end
+    end
   end
 end
 
@@ -77,7 +89,10 @@ function downloadCalibrationDataHighRes()
            "data/calibrations/6.mdf",]
 
   for file in files
-    stream = get("http://media.tuhh.de/ibi/openMPIData/"*file)
-    save(stream, Pkg.dir("OpenMPIData",file))
+    HTTP.open("GET", "http://media.tuhh.de/ibi/openMPIData/"*file) do http
+      open(Pkg.dir("OpenMPIData",file), "w") do file
+        write(file, http)
+      end
+    end
   end
 end

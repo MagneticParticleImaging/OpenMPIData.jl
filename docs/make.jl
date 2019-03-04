@@ -16,10 +16,8 @@ makedocs(
         "Datasets" => "datasets.md",
         "Reconstruction"=> "reconstructions.md"
     ],
+    html_prettyurls = false, #!("local" in ARGS)
 )
 
 deploydocs(repo   = "github.com/MagneticParticleImaging/OpenMPIData.jl.git",
-           julia  = "release",
-           target = "build",
-           deps   = nothing,
-           make   = nothing)
+           target = "build")

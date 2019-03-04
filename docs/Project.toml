@@ -1,0 +1,10 @@
+[deps]
+MPIFiles = "371237a9-e6c1-5201-9adb-3d8cfa78fa9f"
+RegularizedLeastSquares = "1e9c538a-f78c-5de5-8ffb-0b6dbe892d23"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+LinearOperators = "5c8ed15e-5a4c-59e4-a42b-c7e8811fb125"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
+OpenMPIData = "46e8875b-c064-59da-a3bf-c1683cc8c07a"

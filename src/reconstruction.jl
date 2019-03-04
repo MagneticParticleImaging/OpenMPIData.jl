@@ -54,7 +54,7 @@ argminₓ(‖Ax-b‖² + λ‖b‖²).
 * `enforceReal::Bool`: Enable projection of solution on real plane during iteration
 * `enforcePositive::Bool`: Enable projection of solution onto positive halfplane during iteration
 """ ->
-function kaczmarzReg{T}(A::AbstractMatrix{T}, b::Vector{T}, iterations, lambd, shuff, enforceReal, enforcePositive )
+function kaczmarzReg(A::AbstractMatrix{T}, b::Vector{T}, iterations, lambd, shuff, enforceReal, enforcePositive ) where T
   M = size(A,2)
   N = size(A,1)
 
