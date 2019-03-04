@@ -109,7 +109,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Scanners",
     "title": "Bruker Preclinical MPI Scanner",
     "category": "section",
-    "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 11.8 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 118 mm\nMaxDrive-Field Amplitude 14 mT x 14 mT x 14 mT\nMaxFocus-Field Amplitude 17 mT x 17 mT x 42 mT\nDrive-Field Frequency 2.5MHz/102 x 2.5MHz/96 x 2.5MHz/99\nMax Selection-Field Gradient -1.25 T/m x -1.25 T/m x 2.5 T/m\nRepetition Time 38.4 mus - 21.54 ms"
+    "text": "(Image: Bruker Preclinical MPI Scanner)The preclinical MPI scanner from Bruker has a 118 cm bore and is equipped with a fully 3D send/receive system and 3D focus fields allowing for flexible measurement sequencies. The system parameters are given belowParameter Value\nScanner Bore Diameter 118 mm\nMaxDrive-Field Amplitude 14 mT x 14 mT x 14 mT\nMaxFocus-Field Amplitude 17 mT x 17 mT x 42 mT\nDrive-Field Frequency 2.5MHz/102 x 2.5MHz/96 x 2.5MHz/99\nMax Selection-Field Gradient -1.25 T/m x -1.25 T/m x 2.5 T/m\nRepetition Time 38.4 mus - 21.54 ms"
 },
 
 {
