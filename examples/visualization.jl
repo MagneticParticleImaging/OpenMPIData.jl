@@ -1,5 +1,7 @@
 export showMIPs, showSlices
 
+PyPlot.rc("font", family="serif")
+PyPlot.rc("text", usetex=true)
 
 function showMIPs(c; fignum=1, filename=nothing)
   cAbs = abs.(data(c))
@@ -19,7 +21,7 @@ function showMIPs(c; fignum=1, filename=nothing)
   imshow(cxy, interpolation="nearest")
   title("MIP xy")
 
-  subplots_adjust(wspace=0.18,hspace=0.3,left=0.06,bottom=0.06,right=1.0,top=0.95)
+  subplots_adjust(wspace=0.18,hspace=0.3,left=0.06,bottom=0.06,right=1.0,top=0.93)
 
   if filename != nothing
     savefig(filename)
@@ -47,7 +49,7 @@ function showSlices(c, slice; fignum=1, filename=nothing)
   imshow(cxy, interpolation="nearest")
   title("Slice at z=$z xy")
 
-  subplots_adjust(wspace=0.18,hspace=0.3,left=0.06,bottom=0.06,right=1.0,top=0.95)
+  subplots_adjust(wspace=0.18,hspace=0.3,left=0.06,bottom=0.06,right=1.0,top=0.93)
 
   if filename != nothing
     savefig(filename)
