@@ -1,11 +1,11 @@
-export showMIPs,showSlices
+export showMIPs, showSlices
 
 
-function showMIPs(c::Array; fignum=1, filename=nothing)
-  cAbs = abs.(c)
-  cxy = maximum(cAbs,3)[:,:,1]
-  cxz = maximum(cAbs,2)[:,1,:]
-  cyz = maximum(cAbs,1)[1,:,:]
+function showMIPs(c; fignum=1, filename=nothing)
+  cAbs = abs.(data(c))
+  cxy = maximum(cAbs,dims=3)[:,:,1]
+  cxz = maximum(cAbs,dims=2)[:,1,:]
+  cyz = maximum(cAbs,dims=1)[1,:,:]
 
   figure(fignum, figsize=(4,4))
   
@@ -25,8 +25,8 @@ function showMIPs(c::Array; fignum=1, filename=nothing)
     savefig(filename)
   end
 end
-function showSlices(c::Array,slice; fignum=1, filename=nothing)
-  cAbs = abs.(c)
+function showSlices(c, slice; fignum=1, filename=nothing)
+  cAbs = abs.(data(c))
   x=slice[1]
   y=slice[2]
   z=slice[3]
