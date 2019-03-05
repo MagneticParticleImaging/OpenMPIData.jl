@@ -5,36 +5,41 @@ downloadOpenMPIData()</code></pre><p>The first command will import the OpenMPIDa
  download2DData()
  download3DData()
  downloadCalibrationDataLowRes()
- downloadCalibrationDataHighRes()</code></pre><h2><a class="nav-anchor" id="Example-Reconstruction-1" href="#Example-Reconstruction-1">Example Reconstruction</a></h2><p>Once the data is downloaded one can execute one of the example reconstruction scripts</p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco3D.jl&quot;))</code></pre><p>The content of this script is given below</p><pre><code class="language-julia">using OpenMPIData
+ downloadCalibrationDataHighRes()</code></pre><h2><a class="nav-anchor" id="Example-Reconstruction-1" href="#Example-Reconstruction-1">Example Reconstruction</a></h2><p>Once the data is downloaded one can execute one of the example reconstruction scripts. To this end first the reconstruction package <a href="https://github.com/MagneticParticleImaging/MPIReco.jl">MPIReco.jl</a> needs to be installed:</p><pre><code class="language-julia">using Pkg
+Pkg.add(PackageSpec(url=&quot;https://github.com/MagneticParticleImaging/OpenMPIData.jl.git&quot;))</code></pre><p>Then, the reconstruction script for the 3D excitation can be run by calling</p><pre><code class="language-julia">using OpenMPIData
+include(joinpath(OpenMPIData.basedir(), &quot;examples/reco3D.jl&quot;))</code></pre><p>The content of this script is given below</p><pre><code class="language-julia">using PyPlot, MPIReco, OpenMPIData
 
-filenameCalib = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;calibrations&quot;,&quot;3.mdf&quot;)
-#filenameCalib = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;calibrations&quot;,&quot;6.mdf&quot;)#High Resolution
+include(&quot;visualization.jl&quot;)
 
-### Shape Phantom
- phantom = &quot;shapePhantom&quot;
-### Resolution Phantom
-# phantom = &quot;resolutionPhantom&quot;
-### Concentration Phantom
-# phantom = &quot;concentrationPhantom&quot;
+filenameCalib = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;calibrations&quot;,&quot;1.mdf&quot;)
+#filenameCalib = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;calibrations&quot;,&quot;4.mdf&quot;)
 
-filenameMeas = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;measurements&quot;,phantom,&quot;3.mdf&quot;)
+for (i,phantom) in enumerate([&quot;shapePhantom&quot;, &quot;resolutionPhantom&quot;, &quot;concentrationPhantom&quot;])
 
-c = reconstruction(filenameCalib, filenameMeas, iterations=3, lambda=0.001,
-                   minFreq=80e3, SNRThresh=2.0, recChannels=1:3)
-mkpath( Pkg.dir(&quot;OpenMPIData&quot;,&quot;data/reconstructions/$(phantom)&quot;))
-s=size(c)
-if phantom ==&quot;shapePhantom&quot;
-  filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D.png&quot;)
-  showMIPs(c[:,:,:,1],filename=filenameImage)
-elseif phantom ==&quot;resolutionPhantom&quot;
-  slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
-  filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D.png&quot;)
-  showSlices(c[:,:,:,1],slice,filename=filenameImage)
-elseif phantom ==&quot;concentrationPhantom&quot;
-  slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
-  slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,2*div(s[3],3)+1]
-  filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D_1.png&quot;)
-  showSlices(c[:,:,:,1],slice1,filename=filenameImage,fignum=1)
-  filenameImage = Pkg.dir(&quot;OpenMPIData&quot;,&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction3D_2.png&quot;)
-  showSlices(c[:,:,:,1],slice2,filename=filenameImage,fignum=2)
-end</code></pre><p>Within the script one can chose different datasets by changing the <code>phantom</code> string. The OpenMPIData package contains a small reconstruction library that uses <a href="https://github.com/MagneticParticleImaging/MPIFiles.jl">MPIFiles.jl</a> for handling of MDF files. To reconstruct the 1D or the 2D dataset use</p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco1D.jl&quot;))</code></pre><p>or</p><pre><code class="language-julia">include(Pkg.dir(&quot;OpenMPIData&quot;,&quot;examples/reco2D.jl&quot;))</code></pre><p>The 1D and 2D reconstructions are performed patchwise and stiched to 3D-Volume afterwards.</p><footer><hr/><a class="previous" href="index.html"><span class="direction">Previous</span><span class="title">Home</span></a><a class="next" href="scanners.html"><span class="direction">Next</span><span class="title">Scanners</span></a></footer></article></body></html>
+  filenameMeas = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;measurements&quot;,phantom,&quot;1.mdf&quot;)
+
+  # reconstruct data
+  c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambd=0.1,
+                    minFreq=80e3, SNRThresh=5.0, recChannels=1:3,
+		    bgCorrectionInternal=true)[:,:,:,9:27,:]
+
+  mkpath( joinpath(OpenMPIData.basedir(),&quot;data/reconstructions/$(phantom)&quot;))
+  s = size(c)[2:4]
+  
+  # visualization  
+  if phantom ==&quot;shapePhantom&quot;
+    filenameImage = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction1D.png&quot;)
+    showMIPs(c[1,:,:,:,1],filename=filenameImage, fignum=i)
+  elseif phantom ==&quot;resolutionPhantom&quot;
+    slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
+    filenameImage = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction1D.png&quot;)
+    showSlices(c[1,:,:,:,1],slice,filename=filenameImage, fignum=i)
+  elseif phantom ==&quot;concentrationPhantom&quot;
+    slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
+    slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
+    filenameImage = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction1D_1.png&quot;)
+    showSlices(c[1,:,:,:,1],slice1,filename=filenameImage,fignum=i)
+    filenameImage = joinpath(OpenMPIData.basedir(),&quot;data&quot;,&quot;reconstructions&quot;,&quot;$phantom&quot;,&quot;reconstruction1D_2.png&quot;)
+    showSlices(c[1,:,:,:,1],slice2,filename=filenameImage,fignum=i+1)
+  end
+end</code></pre><p>Within the script all three datasets are reconstructed and visualized using <code>PyPlot</code>.  To reconstruct the 1D or the 2D dataset use</p><pre><code class="language-julia">include(joinpath(OpenMPIData.basedir(), &quot;examples/reco1D.jl&quot;))</code></pre><p>or</p><pre><code class="language-julia">include(joinpath(OpenMPIData.basedir(), &quot;examples/reco2D.jl&quot;))</code></pre><footer><hr/><a class="previous" href="index.html"><span class="direction">Previous</span><span class="title">Home</span></a><a class="next" href="scanners.html"><span class="direction">Next</span><span class="title">Scanners</span></a></footer></article></body></html>
