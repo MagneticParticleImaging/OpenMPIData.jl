@@ -333,7 +333,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Reconstruction",
     "title": "Reconstructions",
     "category": "section",
-    "text": "Here we show you how the different phantom reconstructions for 1D sequence, 2D sequence and 3D seqguence look like."
+    "text": "Reconstruction results for the different phantoms and measurements sequences are shown below."
 },
 
 {
