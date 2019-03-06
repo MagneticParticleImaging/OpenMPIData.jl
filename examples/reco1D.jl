@@ -5,14 +5,18 @@ include("visualization.jl")
 filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","1.mdf")
 #filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","4.mdf")
 
+
+#phantom= "shapePhantom"
+#i=1
 for (i,phantom) in enumerate(["shapePhantom", "resolutionPhantom", "concentrationPhantom"])
 
   filenameMeas = joinpath(OpenMPIData.basedir(),"data","measurements",phantom,"1.mdf")
 
   # reconstruct data
-  c = reconstruction(filenameCalib, filenameMeas, iterations=1, lambd=0.1,
-                    minFreq=80e3, SNRThresh=5.0, recChannels=1:3,
-		    bgCorrectionInternal=true)[:,:,9:27,9:27,:]
+  c = reconstruction(filenameCalib, filenameMeas, iterations=30, lambd=0.05,
+                    minFreq=80e3, SNRThresh=1.5, maxFreq=500e3, recChannels=1:3,
+		                bgCorrectionInternal=true)[:,:,10:28,10:28,:]
+
 
   mkpath( joinpath(OpenMPIData.basedir(),"data/reconstructions/$(phantom)"))
   s = size(c)[2:4]
