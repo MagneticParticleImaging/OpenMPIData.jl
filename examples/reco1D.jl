@@ -5,9 +5,6 @@ include("visualization.jl")
 filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","1.mdf")
 #filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","4.mdf")
 
-
-#phantom= "shapePhantom"
-#i=1
 for (i,phantom) in enumerate(["shapePhantom", "resolutionPhantom", "concentrationPhantom"])
 
   filenameMeas = joinpath(OpenMPIData.basedir(),"data","measurements",phantom,"1.mdf")
