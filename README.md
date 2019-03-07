@@ -1,6 +1,6 @@
 # OpenMPIData
 
-[![Build Status](https://travis-ci.org/tknopp/OpenMPIData.jl.svg?branch=master)](https://travis-ci.org/MagneticParticleImaging/OpenMPIData.jl)
+[![Build Status](https://travis-ci.org/MagneticParticleImaging/OpenMPIData.jl.svg?branch=master)](https://travis-ci.org/MagneticParticleImaging/OpenMPIData.jl)
 
 The aim of this project is to provide MPI data that are openly available for the research
 community and can be freely used. You can find detailed description on the project under
