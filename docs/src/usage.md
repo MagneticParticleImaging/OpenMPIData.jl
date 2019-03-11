@@ -39,7 +39,7 @@ To download the datasets for 1D, 2D, 3D or the system functions individually, us
 Once the data is downloaded one can execute one of the example reconstruction scripts. To this end first the reconstruction package [MPIReco.jl](https://github.com/MagneticParticleImaging/MPIReco.jl) needs to be installed:
 ```julia
 using Pkg
-Pkg.add(PackageSpec(url="https://github.com/MagneticParticleImaging/OpenMPIData.jl.git"))
+Pkg.add(PackageSpec(url="https://github.com/MagneticParticleImaging/MPIReco.jl.git"))
 ```
 Then, the reconstruction script for the 3D excitation can be run by calling
 ```julia
