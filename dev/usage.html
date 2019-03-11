@@ -6,7 +6,7 @@ downloadOpenMPIData()</code></pre><p>The first command will import the OpenMPIDa
  download3DData()
  downloadCalibrationDataLowRes()
  downloadCalibrationDataHighRes()</code></pre><h2><a class="nav-anchor" id="Example-Reconstruction-1" href="#Example-Reconstruction-1">Example Reconstruction</a></h2><p>Once the data is downloaded one can execute one of the example reconstruction scripts. To this end first the reconstruction package <a href="https://github.com/MagneticParticleImaging/MPIReco.jl">MPIReco.jl</a> needs to be installed:</p><pre><code class="language-julia">using Pkg
-Pkg.add(PackageSpec(url=&quot;https://github.com/MagneticParticleImaging/OpenMPIData.jl.git&quot;))</code></pre><p>Then, the reconstruction script for the 3D excitation can be run by calling</p><pre><code class="language-julia">using OpenMPIData
+Pkg.add(PackageSpec(url=&quot;https://github.com/MagneticParticleImaging/MPIReco.jl.git&quot;))</code></pre><p>Then, the reconstruction script for the 3D excitation can be run by calling</p><pre><code class="language-julia">using OpenMPIData
 include(joinpath(OpenMPIData.basedir(), &quot;examples/reco3D.jl&quot;))</code></pre><p>The content of this script is given below</p><pre><code class="language-julia">using PyPlot, MPIReco, OpenMPIData
 
 include(&quot;visualization.jl&quot;)
