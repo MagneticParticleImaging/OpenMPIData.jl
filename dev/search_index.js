@@ -125,7 +125,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Tracers",
     "category": "section",
-    "text": "As MPI is a tracer based imaging modality, it is important to relate all measurements to the tracer being used. Currently all datasets are measured with the same tracer."
+    "text": "As MPI is a tracer based imaging modality, it is important to relate all measurements to the tracer being used. Currently most datasets are measured with perimag and one system matrix is measured with synomag-D."
 },
 
 {
@@ -133,7 +133,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Perimag",
     "category": "section",
-    "text": "The tracer being used for the measurements is Perimag from the company Micromod. Perimag offers a very good MPI signal comparable to Resovist  and can be directly ordered, which is essential for reproducible research."
+    "text": "Perimag is a dextran coated tracer from the company Micromod. Perimag offers a very good MPI signal comparable to Resovist and can be directly ordered, which is essential for reproducible research."
+},
+
+{
+    "location": "tracers.html#Synomag-D-1",
+    "page": "Tracers",
+    "title": "Synomag-D",
+    "category": "section",
+    "text": "Synomag is a dextran coated tracer from the company Micromod as well. It provides up to a factor of 2 better signal than perimag."
 },
 
 {
