@@ -141,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Tracers",
     "title": "Synomag-D",
     "category": "section",
-    "text": "Synomag is a dextran coated tracer from the company Micromod as well. It provides up to a factor of 2 better signal than perimag."
+    "text": "Synomag-D is a dextran coated tracer from the company Micromod as well. It provides up to a factor of 2 better signal than perimag."
 },
 
 {
