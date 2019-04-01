@@ -9,5 +9,5 @@ one system matrix is measured with synomag-D.
 company Micromod. Perimag offers a very good MPI signal comparable to Resovist and can be directly ordered, which is essential for reproducible research.
 
 ## Synomag-D
-[Synomag](https://www.micromod.de/en/produkte-230-magnetic_syno.html) is a dextran coated tracer from the
+[Synomag-D](https://www.micromod.de/en/produkte-230-magnetic_syno.html) is a dextran coated tracer from the
 company Micromod as well. It provides up to a factor of 2 better signal than perimag.
