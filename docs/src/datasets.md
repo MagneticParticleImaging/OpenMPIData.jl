@@ -16,6 +16,9 @@ In the following table an overview about all datasets is given:
 | concentrationPhantom | 1 | Bruker | 1D Cartesian | Perimag |
 | concentrationPhantom | 2 | Bruker | 2D Lissajous | Perimag |
 | concentrationPhantom | 3 | Bruker | 3D Lissajous | Perimag |
+| rotationPhantom | 1 | Bruker | 3D Lissajous | Perimag |
+| rotationPhantom | 2 | Bruker | 3D Lissajous | Perimag |
+| rotationPhantom | 3 | Bruker | 3D Lissajous | Perimag |
 
 In addition several calibration measurements are available:
 
@@ -30,3 +33,7 @@ In addition several calibration measurements are available:
 | calibration | 5 | Bruker | 2D Lissajous | Perimag |37x37x37|37x37x18.5|
 | calibration | 6 | Bruker | 3D Lissajous | Perimag |37x37x37|37x37x18.5|
 | calibration | 7 | Bruker | 3D Lissajous | Synomag-D |37x37x37|37x37x18.5|
+| calibration | 8 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 9 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 10 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 11 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
