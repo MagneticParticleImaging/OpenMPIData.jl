@@ -317,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Phantom Measurements",
     "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer\nshapePhantom 1 Bruker 1D Cartesian Perimag\nshapePhantom 2 Bruker 2D Lissajous Perimag\nshapePhantom 3 Bruker 3D Lissajous Perimag\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
+    "text": "Study Experiment Number Scanner Sequence Tracer\nshapePhantom 1 Bruker 1D Cartesian Perimag\nshapePhantom 2 Bruker 2D Lissajous Perimag\nshapePhantom 3 Bruker 3D Lissajous Perimag\nresolutionPhantom 1 Bruker 1D Cartesian Perimag\nresolutionPhantom 2 Bruker 2D Lissajous Perimag\nresolutionPhantom 3 Bruker 3D Lissajous Perimag\nconcentrationPhantom 1 Bruker 1D Cartesian Perimag\nconcentrationPhantom 2 Bruker 2D Lissajous Perimag\nconcentrationPhantom 3 Bruker 3D Lissajous Perimag\nrotationPhantom 1 Bruker 3D Lissajous Perimag\nrotationPhantom 2 Bruker 3D Lissajous Perimag\nrotationPhantom 3 Bruker 3D Lissajous PerimagIn addition several calibration measurements are available:"
 },
 
 {
@@ -325,7 +325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Datasets",
     "title": "Calibration Measurements",
     "category": "section",
-    "text": "Study Experiment Number Scanner Sequence Tracer Grid FoV\ncalibration 1 Bruker 1D Cartesian Perimag 19x19x19 38x38x19\ncalibration 2 Bruker 2D Lissajous Perimag 19x19x19 38x38x19\ncalibration 3 Bruker 3D Lissajous Perimag 19x19x19 38x38x19\ncalibration 4 Bruker 1D Cartesian Perimag 37x37x37 37x37x18.5\ncalibration 5 Bruker 2D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 6 Bruker 3D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 7 Bruker 3D Lissajous Synomag-D 37x37x37 37x37x18.5"
+    "text": "Study Experiment Number Scanner Sequence Tracer Grid FoV\ncalibration 1 Bruker 1D Cartesian Perimag 19x19x19 38x38x19\ncalibration 2 Bruker 2D Lissajous Perimag 19x19x19 38x38x19\ncalibration 3 Bruker 3D Lissajous Perimag 19x19x19 38x38x19\ncalibration 4 Bruker 1D Cartesian Perimag 37x37x37 37x37x18.5\ncalibration 5 Bruker 2D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 6 Bruker 3D Lissajous Perimag 37x37x37 37x37x18.5\ncalibration 7 Bruker 3D Lissajous Synomag-D 37x37x37 37x37x18.5\ncalibration 8 Bruker 3D Lissajous Perimag 33x33x27 66x66x27\ncalibration 9 Bruker 3D Lissajous Perimag 33x33x27 66x66x27\ncalibration 10 Bruker 3D Lissajous Perimag 33x33x27 66x66x27\ncalibration 11 Bruker 3D Lissajous Perimag 33x33x27 66x66x27"
 },
 
 {
