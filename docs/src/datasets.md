@@ -37,3 +37,7 @@ In addition several calibration measurements are available:
 | calibration | 9 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
 | calibration | 10 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
 | calibration | 11 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 12 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 13 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 14 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
+| calibration | 15 | Bruker | 3D Lissajous | Perimag |33x33x27|66x66x27|
