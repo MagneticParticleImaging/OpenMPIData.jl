@@ -1,0 +1,13 @@
+name = "OpenMPIData"
+uuid = "23f492f2-76ae-56df-892e-e25cea322c51"
+
+[deps]
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+MPIReco = "e4246700-6248-511e-8146-a1d1f47669d2"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "≥ 1.0.0"

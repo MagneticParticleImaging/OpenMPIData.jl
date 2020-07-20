@@ -4,7 +4,7 @@ PyPlot.rc("font", family="serif")
 PyPlot.rc("text", usetex=true)
 
 function showMIPs(c; fignum=1, filename=nothing)
-  cAbs = abs.(data(c))
+  cAbs = abs.(arraydata(c))
   cxy = maximum(cAbs,dims=3)[:,:,1]
   cxz = maximum(cAbs,dims=2)[:,1,:]
   cyz = maximum(cAbs,dims=1)[1,:,:]
@@ -28,7 +28,7 @@ function showMIPs(c; fignum=1, filename=nothing)
   end
 end
 function showSlices(c, slice; fignum=1, filename=nothing)
-  cAbs = abs.(data(c))
+  cAbs = abs.(arraydata(c))
   x=slice[1]
   y=slice[2]
   z=slice[3]

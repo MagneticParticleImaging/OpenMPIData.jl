@@ -1,8 +1,0 @@
-julia 1.0
-Documenter
-Reexport
-PyPlot
-HDF5
-MPIFiles
-RegularizedLeastSquares
-HTTP
