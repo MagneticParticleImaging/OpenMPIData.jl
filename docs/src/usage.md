@@ -11,7 +11,7 @@ All data can be found under the following [link](https://media.tuhh.de/ibi/openM
 In order to install the programming tools you first have to install [Julia](http://julialang.org/downloads/) in version 1.1 or newer. Then open Julia and enter
 ```julia
 using Pkg
-Pkg.add(PackageSpec(url="https://github.com/MagneticParticleImaging/OpenMPIData.jl.git"))
+Pkg.add(url="https://github.com/MagneticParticleImaging/OpenMPIData.jl.git")
 ```
 which will install the package. Then enter
 ```julia
@@ -36,10 +36,10 @@ To download the datasets for 1D, 2D, 3D or the system functions individually, us
 
 ## Example Reconstruction
 
-Once the data is downloaded one can execute one of the example reconstruction scripts. To this end first the reconstruction package [MPIReco.jl](https://github.com/MagneticParticleImaging/MPIReco.jl) needs to be installed:
+Once the data is downloaded one can execute one of the example reconstruction scripts. To this end first the reconstruction package [MPIReco.jl](https://github.com/MagneticParticleImaging/MPIReco.jl) and the visualization package [PyPlot.jl](https://github.com/JuliaPy/PyPlot.jl) need to be installed:
 ```julia
 using Pkg
-Pkg.add(PackageSpec(url="https://github.com/MagneticParticleImaging/MPIReco.jl.git"))
+Pkg.add(["MPIReco","PyPlot"])
 ```
 Then, the reconstruction script for the 3D excitation can be run by calling
 ```julia
