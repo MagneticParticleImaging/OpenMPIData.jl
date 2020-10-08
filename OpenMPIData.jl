@@ -1,0 +1,12 @@
+@article{OpenMPIData,
+	Author = {{Knopp}, T. and {Szwargulski}, P. and {Griese}, F. and {Gr{\"a}ser}, M.},
+	Title = {OpenMPIData: An initiative for freely accessible magnetic particle imaging data},
+	Journal = {Data in Brief},
+	Year = {2020},
+	Volume = {28},
+	Pages = {104971},
+	Month = {2},
+	Doi = {https://doi.org/10.1016/j.dib.2019.104971},
+	Url = {https://www.sciencedirect.com/science/article/pii/S2352340919313265?via%3Dihub},
+	Keywords = {MPI},
+}
