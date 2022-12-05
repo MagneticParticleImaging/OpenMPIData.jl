@@ -12,7 +12,7 @@ for (i,phantom) in enumerate(["shapePhantom", "resolutionPhantom", "concentratio
   # reconstruct data
   c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambd=0.01,
                     minFreq=80e3, SNRThresh=1.5, recChannels=1:3,
-		    bgCorrectionInternal=true, spectralLeakageCorrection=false)[:,:,:,10:28,:]
+		    bgCorrectionInternal=true, spectralLeakageCorrection=false, tfCorrectionInternal = false)[:,:,:,10:28,:]
 
   mkpath( joinpath(OpenMPIData.basedir(),"data/reconstructions/$(phantom)"))
   s = size(c)[2:4]
