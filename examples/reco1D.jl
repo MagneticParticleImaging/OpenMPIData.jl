@@ -1,16 +1,18 @@
-using PyPlot, MPIReco, OpenMPIData
+using CairoMakie, MPIReco, OpenMPIData, MPIReco.RegularizedLeastSquares
 
 include("visualization.jl")
 
 filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","1.mdf")
 #filenameCalib = joinpath(OpenMPIData.basedir(),"data","calibrations","4.mdf")
+calib = MPIFile(filenameCalib)
 
 for (i,phantom) in enumerate(["shapePhantom", "resolutionPhantom", "concentrationPhantom"])
 
   filenameMeas = joinpath(OpenMPIData.basedir(),"data","measurements",phantom,"1.mdf")
+  meas = MPIFile(filenameMeas)
 
   # reconstruct data
-  c = reconstruction(filenameCalib, filenameMeas, iterations=10, lambd=0.001,
+  c = reconstruct("SinglePatch", meas; sf = calib, iterations=10, reg= [L2Regularization(0.001)], solver = Kaczmarz,
                            minFreq=80e3, SNRThresh=1.25,  recChannels=1:3,
                    bgCorrectionInternal=true, spectralLeakageCorrection=false)[:,:,10:28,10:28,:]
 
@@ -20,18 +22,18 @@ for (i,phantom) in enumerate(["shapePhantom", "resolutionPhantom", "concentratio
   # visualization  
   if phantom =="shapePhantom"
     filenameImage = joinpath(OpenMPIData.basedir(),"data","reconstructions","$phantom","reconstruction1D.png")
-    showMIPs(c[1,:,:,:,1],filename=filenameImage, fignum=i)
+    showMIPs(c[1,:,:,:,1],filename=filenameImage)
   elseif phantom =="resolutionPhantom"
     slice=[div(s[1]+1,2),div(s[2]+1,2),div(s[3]+1,2)]
     filenameImage = joinpath(OpenMPIData.basedir(),"data","reconstructions","$phantom","reconstruction1D.png")
-    showSlices(c[1,:,:,:,1],slice,filename=filenameImage, fignum=i)
+    showSlices(c[1,:,:,:,1],slice,filename=filenameImage)
   elseif phantom =="concentrationPhantom"
     slice1=[div(s[1],3)+1,div(s[2],3)+1,div(s[3],3)+1]
     slice2=[2*div(s[1],3)+1,2*div(s[2],3)+1,div(s[3],3)+1]
     filenameImage = joinpath(OpenMPIData.basedir(),"data","reconstructions","$phantom","reconstruction1D_1.png")
-    showSlices(c[1,:,:,:,1],slice1,filename=filenameImage,fignum=i)
+    showSlices(c[1,:,:,:,1],slice1,filename=filenameImage)
     filenameImage = joinpath(OpenMPIData.basedir(),"data","reconstructions","$phantom","reconstruction1D_2.png")
-    showSlices(c[1,:,:,:,1],slice2,filename=filenameImage,fignum=i+1)
+    showSlices(c[1,:,:,:,1],slice2,filename=filenameImage)
   end
 end
 
